@@ -1701,7 +1701,7 @@ body .tb-about-hero .tb-decorative.right {
   border-radius: 8px;
 }
 .tb-product-additional__information .product_meta-content {
-  margin-bottom: 0.2rem !important;
+  margin-bottom: 0 !important;
 }
 .tb-product-additional__information .product_meta-icon {
   margin-right: 0.2rem !important;
@@ -1710,12 +1710,12 @@ body .tb-about-hero .tb-decorative.right {
   width: 1.4rem;
 }
 .tb-product-additional__information .tb-product_meta-content-wrapper:first-child {
-  margin-bottom: 1rem !important;
+  margin-bottom: 0.6rem !important;
 }
 .tb-product-additional__information .tb-metaLabels {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.46rem;
+  gap: 0.42rem;
 }
 .tb-product-additional__information .tb-metaLabels span {
   display: block;
@@ -1725,4 +1725,5 @@ body .tb-about-hero .tb-decorative.right {
   padding: 0.3rem 0.52rem;
   color: #4f4f4f;
   border-radius: 4px;
+  border: 1px solid #e3e3e3;
 }
