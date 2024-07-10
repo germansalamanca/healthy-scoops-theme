@@ -22,21 +22,25 @@
     <h2 class="wow fadeIn">Healthy nutrition for a happier life</h2>
     <h3 class="tb-section-title wow fadeIn">Shop by Categories</h3>
     <div class="tb-grid tb-grid-3">
-      <a href="#" class="tb-feat-cat arepas wow fadeInUp">
+      <a
+        href="{{ collections['arepas-and-empanadas'].url }}"
+        class="tb-feat-cat arepas wow fadeInUp"
+      >
         <h4 class="tb-title">
           Arepas and<br>
           Empanadas
         </h4>
         <span class="tb-cta">View all</span>
       </a>
-      <a href="#" class="tb-feat-cat chicken wow fadeInUp">
+      <a href="{{ collections.chicken.url }}" class="tb-feat-cat chicken wow fadeInUp">
         <h4 class="tb-title">
           Chicken meat<br>
           and turkey
         </h4>
         <span class="tb-cta">View all</span>
       </a>
-      <a href="#" class="tb-feat-cat soups wow fadeInUp">
+
+      <a href="{{ collections['soups-and-lasagnas'].url }}" class="tb-feat-cat soups wow fadeInUp">
         <h4 class="tb-title">
           Soups and<br>
           Lasagnas
