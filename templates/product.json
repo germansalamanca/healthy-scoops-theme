@@ -118,13 +118,13 @@
         "591b15f5-a7e8-4c6d-bc8c-d8c74e98a085": {
           "type": "icon_text",
           "settings": {
-            "text1": "Dietary preferences",
+            "text1": "Dietary preferences:",
             "icon1": "shopify:\/\/shop_images\/dietary.png",
-            "html1": "Nature Product",
+            "html1": "",
             "link1": "",
             "text1_color": "#000000",
             "html1_color": "#000000",
-            "text2": "Allergen information",
+            "text2": "Allergen information:",
             "icon2": "shopify:\/\/shop_images\/allergenic.png",
             "html2": "",
             "link2": "",
