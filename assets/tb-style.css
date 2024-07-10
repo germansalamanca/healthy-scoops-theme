@@ -156,6 +156,7 @@ img {
 .tb-btn:hover {
   transform: scale(1.06);
   background-color: #293820;
+  color: white;
 }
 .tb-btn-yellow {
   background-color: #F7B727;
@@ -163,6 +164,7 @@ img {
 }
 .tb-btn-yellow:hover {
   background-color: #EF8524;
+  color: #293820;
 }
 
 @keyframes tbGrow {

@@ -131,12 +131,14 @@ img{
 	&:hover{
 		transform: scale(1.06);
 		background-color: $green-dark;
+		color: white;
 	}
 	&-yellow{
 		background-color: $yellow-orange;
 		color: #293820;
 		&:hover{
 			background-color: $orange;
+			color: #293820;
 		}
 	}
 }
