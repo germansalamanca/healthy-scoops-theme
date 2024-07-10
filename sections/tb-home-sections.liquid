@@ -1,0 +1,108 @@
+		<div class="tb-sectionsGroup">
+			<!-- Starts Our Differentiations --> 
+			<section class="tb-differentiators">
+				<div class="tb-container">
+
+					<div class="tb-decorative left wow fadeInLeft"></div>
+					<div class="tb-decorative right wow fadeInDown"></div>
+
+					<h2 class="tb-section-title wow fadeIn">Our Differentiators</h2>
+					<p class="tb-description wow fadeIn delay-1s">Morbi eget congue lectus. Donec eleifend ultricies urna et euismod. Sed consectetur tellus eget odio aliquet, vel vestibulum.</p>
+
+					<div class="tb-grid tb-grid-4 wow fadeInUp">
+
+						<div class="tb-flipCard">
+							<img src="{{ 'tb-flip-1.jpg' | asset_url }}" alt="Arepa">
+							<h3 class="tb-title">Authentic<br>Latin Flavors<span>:</span></h3>
+							<p class="tb-excerpt">Enjoy the rich, traditional tastes of Latin cuisine, crafted with a modern twist to bring vibrant, authentic flavors to every meal.</p>
+						</div>
+
+						<div class="tb-flipCard">
+							<img src="{{ 'tb-flip-2.jpg' | asset_url }}" alt="Arepa" width="224" height="224">
+							<h3 class="tb-title">Nutrient-Packed<br>Convenience<span>:</span></h3>
+							<p class="tb-excerpt">Enjoy the rich, traditional tastes of Latin cuisine, crafted with a modern twist to bring vibrant, authentic flavors to every meal.</p>
+						</div>
+
+						<div class="tb-flipCard">
+							<img src="{{ 'tb-flip-3.jpg' | asset_url }}" alt="Arepa">
+							<h3 class="tb-title">Health-Focused<br>Ingredients<span>:</span></h3>
+							<p class="tb-excerpt">Enjoy the rich, traditional tastes of Latin cuisine, crafted with a modern twist to bring vibrant, authentic flavors to every meal.</p>
+						</div>
+
+						<div class="tb-flipCard">
+							<img src="{{ 'tb-flip-3.jpg' | asset_url }}" alt="Arepa">
+							<h3 class="tb-title">Woman and<br>Minority Owned<span>:</span></h3>
+							<p class="tb-excerpt">Enjoy the rich, traditional tastes of Latin cuisine, crafted with a modern twist to bring vibrant, authentic flavors to every meal.</p>
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+			<!-- Ends Our Differentiations --> 
+
+			<!-- Starts Recipes --> 
+			<section class="tb-recipes">
+				<div class="tb-container">
+					
+					<div class="tb-decorative left wow fadeInLeft"></div>
+					<div class="tb-decorative right wow fadeInRight"></div>
+
+					<span class="tb-preTitle wow fadeInDown"><span class="tb-icon"></span>Made from the heart<span class="tb-icon"></span></span>
+					<h2 class="tb-section-title wow fadeIn">Our recipes</h2>
+					<h2 class="tb-sectionSubtitle wow fadeInUp">A healthy diet made simple</h2>
+
+					<div class="tb-grid tb-grid-3">
+                      {%  for article in blogs.recipes.articles limit:3 %}
+						<div class="tb-articleRecipe wow fadeIn">
+                            {{ article | image_url: width: 200, height:200, crop:'center' | image_tag | link_to: article.url }}
+							<h3 class="tb-title">{{- article.title | link_to: article.url }}</h3>
+							<p class="tb-excerpt">{{ article.excerpt_or_content | truncate: 180 }}</p>
+							<a href="{{ article.url }}" class="tb-more">See ingredients</a>
+						</div>
+                      {% endfor %}
+					</div>
+
+					<a href="{{ blogs.recipes.url }}" class="tb-btn tb-btn-yellow wow fadeInUp">See recipes</a>
+				</div>
+			</section>
+			<!-- Ends Recipes --> 
+
+			<!-- Starts Our History --> 
+				<section class="tb-ourHistory">
+					<div class="tb-container tb-pos-r">
+						<div class="tb-decorative top"></div>
+						<div class="tb-decorative left wow fadeInUp"></div>
+						<div class="tb-col tb-col-left tb-pos-r wow fadeIn">
+							<img src="https://cdn.shopify.com/s/files/1/0858/1336/2961/t/2/assets/tb-logo-dark.png?v=1720207495" class="tb-logo" alt="Healthy Scoops">
+							<h2 class="tb-section-title">Our history</h2>
+							<blockquote>At Healthy Scoops, we revolutionize fast-paced healthy eating with superior frozen meals made from fresh, wholesome ingredients.</blockquote>
+							<p class="tb-excerpt">Free from additives and preservatives, our meals feature authentic Latin flavors, offering nutritious options for busy lifestyles without compromising on health or taste.”</p>
+							<a href="#" class="tb-btn wow fadeInUp">Learn more</a>
+						</div>
+						<div class="tb-col tb-col-right tb-pos-r">
+							<img src="https://cdn.shopify.com/s/files/1/0858/1336/2961/t/2/assets/tb-img-our-history.png?v=1720207566" class="tb-picture wow fadeIn" alt="Healthy Scoops">
+							<div class="tb-decorative right wow fadeInLeft"></div>
+						</div>
+					</div>
+				</section>
+			<!-- Ends Our History --> 
+
+		</div><!-- .tb-sectionsGroup-->
+
+{% schema %}
+{
+  "name": "Home Sections",
+  "settings": [],
+  "presets": [
+{
+  "name": "Home Sections",
+  "category": "ADVANCED LAYOUT"
+}
+]
+}
+{% endschema %}
+{% stylesheet %}
+{% endstylesheet %}
+{% javascript %}
+{% endjavascript %}

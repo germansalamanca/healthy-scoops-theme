@@ -1,0 +1,26 @@
+{% for article in blogs.recipes.articles limit:3 %}
+  <article>
+    <h3>{{- article.title | link_to: article.url }}</h3>
+    <a href="{{ article.url  }}">
+      {{ article | image_url: width: 200, height:200, crop:'center' | image_tag }}
+    </a>
+    
+  </article>
+{% endfor %}
+
+{% schema %}
+{
+  "name": "Last recipes",
+  "settings": [],
+  "presets": [
+{
+  "name": "Last recipes",
+  "category": "ADVANCED LAYOUT"
+}
+]
+}
+{% endschema %}
+{% stylesheet %}
+{% endstylesheet %}
+{% javascript %}
+{% endjavascript %}

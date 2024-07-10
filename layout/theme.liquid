@@ -1,0 +1,78 @@
+<!doctype html>
+<html class="no-js" lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1.0,user-scalable=0">  
+    <meta name="theme-color" content="{{ settings.color_primary }}">    
+    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.shopify.com" crossorigin>
+    <link rel="preconnect" href="https://monorail-edge.shopifysvc.com">
+
+    {% render 'meta' %}
+    <!-- Social meta  -->
+    {% render 'social-meta-tags' %}    
+    <!-- CSS  -->
+    {% render 'header-css' %}
+    <!-- Primary JS files  -->
+    {% render 'header-js' %}
+    
+    <!-- content for header -->
+    {{ content_for_header }}       
+    <!-- content for header -->
+    
+  {% render 'sohead-reply-common' %}
+  <!-- Tigerbid custom css -->
+  {{ 'tb-custom.css' | asset_url | stylesheet_tag }}
+  {{ 'tb-style.css' | asset_url | stylesheet_tag }}
+    
+  </head>
+  <body id="{{ page_title | handle }}" class="{% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }} {% unless template contains 'index' %} others {% endunless %}">
+    
+    {% if settings.preloader_enable %}    
+    <div class="se-pre-con"></div>
+    {% endif %}
+    
+    <div class="mobile-menu" data-menu="dt-main-menu"></div>
+    <div class="mobile-menu-overlay"></div> 
+    
+    <div id="video_modal" class="video_overlay">
+      <div class="inner">
+      <span id="close_icon" class="dt-sc-btn close-icon" style=" position: absolute; right: 10px; top: 10px;"></span>
+      </div>
+    </div>
+    
+    <div class="off-canvas--viewport">
+      {% if settings.ajax_cart_method == 'drawer' %}
+      {% render 'timber-cart' %}
+      {% endif %}
+       <!-- Theme Header====== -->
+      {% section 'header' %}     
+     {%- if settings.enable_category_menu -%}
+     {% section 'index-vertical-mega-menu' %}
+     {%- endif -%}
+      {% render 'breadcrumb' %}     
+      
+      <div class="clearfix"></div>
+      <div class="shifter-page {% if settings.ajax_cart_method == 'drawer' %}is-moved-by-drawer{% endif %}" id="container">       
+        <!-- content for layout -->
+        {{ content_for_layout }}
+        <!-- content for layout -->        
+      </div>
+      <div class="clearfix"></div>      
+    </div>
+    <!-- Theme Footer ====== -->
+    {% section 'footer' %}     
+    <!-- Footer JS files  -->
+    {% render 'footer-js' %}    
+    <!-- Popup newsletter  -->
+    {% section 'modal-newsletter' %}     
+    <!-- GDPR Cookies  -->
+    {% section 'gdpr-cookies' %}     
+    <!-- Cutomer who last purchased tiny popup -->
+    {% section 'customer-purchased' %}
+    {% render 'dT_loading-overlay' %}
+    {% render 'scroll-to-top' %}
+    
+  </body>
+</html>

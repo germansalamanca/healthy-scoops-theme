@@ -1,0 +1,132 @@
+@use "variables" as *;
+
+section.tb-ourHistory{
+	padding: 4rem 0;
+	background-color: $bg-light;
+	.tb-container{
+		display: flex;
+		gap: 3rem;
+		flex-direction: column;
+		@media only screen and (min-width: $md){
+			flex-direction: row;
+		}
+	}
+	.tb-col{
+			
+	}
+	.tb-col-left{
+		animation-delay: .3s;
+		@media only screen and (min-width: $md){
+			width: 50%;
+		}
+		@media only screen and (min-width: $lg){
+			padding-right: 2rem;
+			max-width: 400px;
+			width: 35%;
+		}
+	}
+	.tb-col-right{
+		@media only screen and (min-width: $md){
+			width: 50%;
+		}
+		@media only screen and (min-width: $lg){
+			padding-left: 2rem;
+			width: 65%;
+		}
+	}
+	.tb-logo{
+		max-width: 358px;
+		width: 100%;
+		margin-bottom: 2rem;
+	}
+	.tb-section-title{
+		text-align: left;
+	}
+	blockquote{
+		margin-left: 1.4rem;
+		font-family: Merriweather;
+		font-weight: bold;
+		font-style: italic;
+		line-height: 1.6;
+		color: #525252;
+	}
+	.tb-excerpt{
+		margin-bottom: 5rem;
+	}
+	.tb-btn{
+		animation-delay: .7s;
+	}
+	.tb-picture{
+		max-width: 600px;
+		width: 100%;
+		animation-delay: .5s;
+	}
+	.tb-decorative{
+		&.right{
+			width: 280px;
+			height: 280px;
+			top:-32%;
+			right: 12%;
+			background-image: url(#{$img-url}tb-deco-history-right.png);
+			animation-delay: .3s;
+			@media only screen and (min-width: $sm){
+				width: 280px;
+				height: 280px;
+				top:-10%;
+				right: 12%;
+			}
+			@media only screen and (min-width: $md){
+				width: 280px;
+				height: 280px;
+				top:-28%;
+				right: 6%;
+			}
+			@media only screen and (min-width: $lg){
+				top: -6%;
+				right: 4%;
+			}
+			@media only screen and (min-width: $xl){
+				width: 320px;
+				height: 320px;
+				top: -4%;
+				right: -6%;
+			}
+			@media only screen and (min-width: $xxl){
+				top: -2%;
+				right: -16%;
+				width: 385px;
+				height: 385px;
+			}
+		}
+		&.left{
+			width: 200px;
+			height: 200px;
+			background-image: url(#{$img-url}tb-deco-history-left.png);
+			top: -10%;
+			left: -16%;
+			animation-delay: .6s;
+			@media only screen and (min-width: $sm){
+				width: 230px;
+				height: 230px;
+			}
+			@media only screen and (min-width: $md){
+				top: -16%;
+				left: -13%;
+			}
+			@media only screen and (min-width: $lg){
+				top: -16%;
+				left: -9%;
+			}
+			@media only screen and (min-width: $xl){
+				width: 340px;
+				height: 340px;
+				top: -30%;
+				left: -12%;
+			}
+			@media only screen and (min-width: $xxl){
+				top: 32%;
+				left: -28%;
+			}
+		}
+	}
+}

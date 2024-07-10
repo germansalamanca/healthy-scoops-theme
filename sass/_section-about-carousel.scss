@@ -1,0 +1,155 @@
+@use "variables"as *;
+
+.tb-about-carousel {
+    background-color: #293820;
+    padding: 8.438rem 0 5.25rem;
+
+    &-figure {
+        width: 225px;
+        height: 234px;
+        left: 30%;
+        background-image: url(#{$img-url}tb-complete-circle.svg);
+        z-index: 1;
+        top: 0;
+    }
+
+    .tb-container {
+        width: 1110px;
+        max-width: 1110px;
+        @media (width <= $iP){
+            width: unset;
+            max-width: 1200px;
+        }
+        &>h3 {
+            margin: 0 auto 7.75rem;
+            font-size: 30px;
+            line-height: 37px;
+            color: white;
+            width: 799px;
+            font-weight: 400;
+            text-align: center;
+            
+            @media (width <=$iP) {
+                width: 100%;
+                margin: 0 auto 5rem;
+                font-size: 25px;
+                line-height: 29px;
+            }
+        }
+    }
+
+    .appetizers {
+        padding: 2.938rem 0 0;
+        position: relative;
+        @media (width <=$iP) {
+            width: 100%;
+        }
+
+        .swiper {
+            &-slide{
+                @media (width <= $iP){
+                    width: 100% !important;
+                }
+            }
+            &-button {
+                &-prev {
+                    left: 0;
+                }
+                &-next{
+                    @media (width <= $iP){
+                        right: 0;
+                    }
+                }
+
+                &-prev,
+                &-next {
+                    color: #6DA63B;
+                    @media (width <= $iP){
+                        top: 70%;
+                    }
+                    &::after {
+                        font-size: 35px;
+                    }
+                }
+            }
+
+            &-pagination {
+                top: unset;
+                bottom: 0;
+
+                &-bullet {
+                    width: 7px;
+                    height: 7px;
+                    background-color: #D6D6D6;
+                    opacity: 1;
+
+                    &-active {
+                        width: 9px;
+                        height: 9px;
+                    }
+                }
+            }
+        }
+    }
+
+    &-slider {
+        &-box {
+            display: flex;
+            gap: 71px;
+
+            @media (width <=$iP) {
+                flex-wrap: wrap;
+            }
+        }
+    }
+
+    .tb-col {
+        &-left {
+            width: 426px;
+            padding-left: 60px;
+
+            @media (width <=$iP) {
+                width: 100%;
+                padding-left: 0;
+            }
+
+            h3 {
+                font-size: 40px;
+                font-weight: bold;
+                color: #FA9522;
+                margin: 0 0 30px;
+            }
+
+            p {
+                font-size: 18px;
+                line-height: 28.6px;
+                color: white;
+                margin: 0 0 44px;
+            }
+
+            h4 {
+                font-size: 22px;
+                letter-spacing: -0.44px;
+                line-height: 30px;
+                color: #FA9522;
+            }
+        }
+
+        &-right {
+            position: relative;
+            padding: 60px 0 0;
+            z-index: 2;
+
+            @media (width <=$iP) {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            img {
+                position: relative;
+                z-index: 2;
+            }
+        }
+    }
+}

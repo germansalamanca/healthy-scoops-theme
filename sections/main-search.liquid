@@ -1,0 +1,123 @@
+   {%- liquid
+    case settings.search_grid
+    when '1'
+    when '2'
+    assign column = 'two-column'
+    assign imageSize = '767x767'
+    when '3'
+    assign column = 'three-column'
+    assign imageSize = '767x767'
+    when '4'
+    assign column = 'four-column'
+    assign imageSize = '767x767'
+    when '5'
+    assign column = 'five-column'
+    assign imageSize = '767x767'
+    when '6'
+    assign column = 'six-column'
+    assign imageSize = '767x767'
+    endcase
+    if settings.search_results_per_page != blank
+    assign search_per_page = settings.search_results_per_page
+    else
+    assign search_per_page = 12
+    endif
+    %}
+
+{% paginate search.results by search_per_page %}
+<div class="container-fluid spacing_enabled" data-section-id="search-page" data-section-type="search-page">
+  <div class="row">
+    <div class="search-products collection-template" data-search-page>
+      {% if search.performed %}
+      {% if search.results_count == 0 %}
+      <h3 class="text--left" style="width:100%;">{{ 'general.search.no_results_html' | t: terms: search.terms }}</h1>
+      {% render 'search-bar' %}
+      {% else %}
+      <h3 class="text--left" style="width:100%;">{{ 'general.search.results_for_html' | t: terms: search.terms }}</h1>
+      {% render 'search-bar' %}
+      {% endif %}
+      {% else %}
+      <h3 class="left" style="width:100%;">{{ 'general.search.title' | t }}</h1>
+      {% render 'search-bar' %}
+      {% endif %}
+      <div class="dT_VProdWrapper">
+        <ul class="dt-sc-column {{ column }}">
+          {% for item in search.results %}
+          {% if item.object_type == 'product' %}
+          {% render 'product-grid-item', product: item, imageSize: imageSize %}
+          {% else %}
+          <li class="grid item-row grid__item">
+            <div class="products">
+              <div class="product-container">
+                {% assign featured_image = item.image | default: item.featured_image %}
+                {% if featured_image != blank %}
+                <a href="{{ item.url }}" title="{{ item.title | escape }}">
+                  {{ featured_image | image_url: width: 1920 | image_tag: featured_image.alt }}
+                </a>
+                {% endif %}
+              </div>
+              <div class="product-detail">
+                <a href="{{ item.url }}" class="grid-link__title">{{ item.title }}</a>
+              </div>
+            </div>
+          </li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+      {% if paginate.pages > 1 %}
+      <div class="text-center">
+        {% render 'pagination', paginate_from: 'search' %}
+      </div>
+      {% endif %}  
+
+
+    </div>
+  </div>
+</div>
+{% endpaginate %}
+
+
+
+
+<style>
+  @media(max-width:991px){
+  .main-search-page .dT_ProductProactiveSearch{
+      
+    width: 280px;
+    margin-left: 30px;
+
+    }
+  .main-search-page   .dT_ProductProactiveSearch input#SearchInput{
+    border: 1px solid;  
+    font-size: 16px;
+  }
+ .main-search-page  .dT_ProductProactiveSearch form{width:100%;}
+ .main-search-page .dT_ProductProactiveSearch .dt-sc-btn{
+   right:0;
+   top:0;
+   
+ }
+   .main-search-page .dT_ProductProactiveSearch .dt-sc-btn svg{
+      margin-top:0;
+    }
+    }
+
+  @media(max-width:430px){
+    .main-search-page .dT_ProductProactiveSearch {
+    width: 100%;
+    margin-left: unset; 
+}
+    .dT_ProductProactiveSearch .dt-sc-btn{
+      width:50px;
+    }
+  }
+  
+</style>
+{% schema %}
+{
+  "name": "Search",
+  "tag": "section",
+  "class": "main-search-page"
+}
+{% endschema %}

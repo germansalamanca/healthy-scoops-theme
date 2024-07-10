@@ -1,0 +1,190 @@
+@use "variables"as *;
+
+.tb-about-selling {
+    background-color: var(--tb-bgLight);
+    padding: 0 0 5rem;
+
+    &-figure {
+        background-image: url(#{$img-url}tb-figure.png);
+        width: 304px;
+        height: 263px;
+        bottom: 0px;
+        left: -50px;
+        @media ( width <= $sm ) {
+            left: -30%;
+        } 
+    }
+    &-chili{
+        background-image: url(#{$img-url}tb-chili.svg);
+        width: 55.08px;
+        height: 75.65px;
+        top: 0;
+        left: 50%;
+        @media ( width <= $sm ) {
+            left: 33%;
+        } 
+    }
+    &-seeds{
+        background-image: url(#{$img-url}tb-green-seeds.png);
+        width: 71px;
+        height: 73px;
+        left: 68%;
+        top: 19%;
+        @media ( width <= $sm ) {
+            left: 57%;
+        } 
+    }
+
+    &-feather{
+        background-image: url(#{$img-url}tb-feather.svg);
+        width: 78px;
+        height: 102px;
+        right: -3%;
+        top: 18%;
+    }
+    &-onion{
+        background-image: url(#{$img-url}tb-onion.svg);
+        width: 84px;
+        height: 93px;
+        right: -100px;
+        top: 33%;
+        @media ( width <= $sxl ) {
+            display: none;
+        }
+
+    }
+
+    .tb-container {
+        max-width: 1140px;
+        display: flex;
+        align-items: center;
+        gap: 99px; 
+        @media ( width <= $lg ) {
+            flex-wrap: wrap;
+            gap: 0;
+            justify-content: center;
+        } 
+    }
+
+    h3 {
+			color: $green;
+			font-size: 0.75rem;
+			letter-spacing: 1.2px;
+			font-weight: 500;
+			display: flex;
+			align-items: center;
+			gap: 11px;
+			margin: 0 0 2rem;
+
+			.tb-about-elipses {
+					position: relative;
+					display: flex;
+					gap: 1px;
+
+					&::after,
+					&::before {
+							content: "";
+							display: block;
+							width: 4px;
+							height: 4px;
+							border-radius: 50%;
+							border: 1px solid $green;
+							position: relative;
+					}
+
+					div {
+							display: block;
+							width: 4px;
+							height: 4px;
+							border-radius: 50%;
+							border: 1px solid $green;
+							position: relative;
+					}
+			}
+    }
+
+    h2 {
+        font-size: 3.1rem;
+        margin: 0 0 2.65rem;
+        font-weight: bold;
+    }
+
+    .tb-col {
+        &-left {
+            width: 570px;
+            @media ( width <= $lg ) {
+                width: 100%;
+            } 
+            p {
+                font-size: 1.1rem;
+                color: #5E5E5E;
+                line-height: 1.9rem;
+            }
+        }
+
+        &-right {
+            width: 472px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 20px;
+            position: relative;
+            padding: 113px 0 21px;
+        }
+    }
+
+    &-card {
+        background-color: white;
+        border-radius: 10px;
+        padding: 27px 33px 27px 49px;
+        position: relative;
+        width: -webkit-fill-available;
+        @media ( width <= $sm ) {
+           padding-left: 80px;
+        } 
+        &-number {
+            position: absolute;
+            width: 60.04px;
+            height: 60.04px;
+            top: 50%;
+            left: -30.02px;
+            background-color: $green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            transform: translateY(-50%);
+            @media ( width <= $sm ) {
+                left: 0;
+                transform: unset;
+                height: 100%;
+                border-radius: 100%;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+                top: 0;
+            } 
+
+            p {
+                color: white;
+                font-size: 18px;
+            }
+        }
+
+        &-text {
+            h4 {
+                margin: 0;
+                font-weight: 400;
+                font-size: 1.25rem;
+                line-height: 24px;
+                margin: 0 0 12px;
+            }
+
+            p {
+                margin: 0;
+                color: $green;
+                font-size: 12px;
+                letter-spacing: 1.2px;
+            }
+        }
+    }
+}

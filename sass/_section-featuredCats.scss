@@ -1,0 +1,115 @@
+@use "variables" as *;
+
+
+section.tb-featuredCats{
+	background: $bg-light url(#{$img-url}tb-bg-healty.png) no-repeat;
+	background-position: center 180px;
+	background-size: 100%;
+	padding: 0 0  6rem;
+	position: relative;
+	z-index: 10;
+	@media screen and (min-width: $md){
+		background-position: center;
+	}
+	.tb-circle-logo{
+		display: block;
+		width: 120px;
+		height: 120px;
+		position: relative;
+		top: -60px;
+		margin: 0 auto -60px;
+		animation: tbFromBottom ease-in-out 1s;
+		@media only screen and (min-width: $md){
+			width: 186px;
+			height: 186px;
+			top: -90px;
+			margin: 0 auto -60px;
+		}
+	}
+	h2, h3{
+		text-align: center;
+		color: $text-color;
+		font-family: $font-family;
+	}
+	h2{
+		font-size: 57px;
+		margin: 0  0 4rem;
+		font-weight: normal;
+	}
+
+	h3{
+		margin: 0  0 1rem;
+		margin-bottom: 3rem;
+	}
+	.tb-grid{
+		grid-gap: 1.6rem;
+	}
+}
+.tb-feat-cat{
+	display: block;
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	background-size: contain;
+	padding: 1.8rem 1rem 2.4rem 2rem;
+	text-decoration: none;
+	border-radius: 12px;
+	transition: $transition-slow;
+	&.arepas{
+		background-color: #E55776;
+		background-image: url(#{$img-url}tb-feat-cat-arepas.png);
+	}
+	&.chicken{
+		background-color: #FA9522;
+		background-image: url(#{$img-url}tb-feat-cat-chicken.png);
+	}
+	&.soups{
+		background-color: $primary;
+		background-image: url(#{$img-url}tb-feat-cat-soups.png);
+	}
+	&:hover{
+		filter: hue-rotate(-8deg);
+		background-position: calc(100% + 16px);
+		.tb-title{
+			transform: translateY(-6px);
+		}
+		.tb-cta{
+			&:after{
+				margin-left: 24px;
+			}
+		}
+	}
+	.tb-title{
+		font-family: $font-family;
+		color: white;
+		font-weight: normal;
+		font-size: 30px;
+		margin: 0 0 .6rem;
+		text-decoration: none;
+		line-height: 1.2;
+		transition: $transition;
+	}
+	.tb-cta{
+		color: white;
+		font-family: $font-family;
+		font-weight: bold;
+		font-size: 16px;
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+		transition: $transition;
+		&:after{
+			content: '';
+			width: 9px;
+			height: 9px;
+			margin-left: 16px;
+			display: block;
+			transform: rotate(45deg);
+			border: 1px solid white;
+			border-left: none;
+			border-bottom: none;
+			transition: $transition;
+		}
+	}
+}
+
+

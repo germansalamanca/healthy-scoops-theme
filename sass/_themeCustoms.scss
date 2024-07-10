@@ -1,0 +1,33 @@
+@use "variables" as *;
+
+.tb-product-additional__information{
+	border-radius: 8px;
+	.product_meta-content{
+		margin-bottom: .4rem !important;
+	}
+	.product_meta-icon{
+		margin-right: .2rem !important;
+		img{
+			width: 1.4rem;
+		}
+	}
+	.tb-product_meta-content-wrapper{
+		&:first-child{
+			margin-bottom: 1rem !important;
+		}
+	}
+	.tb-metaLabels{
+		display: flex;
+		flex-wrap: wrap;
+		gap: .46rem;
+		span{
+			display: block;
+			background: #ffffff;
+			font-size: .86rem;
+			line-height: 1.2;
+			padding: .3rem .52rem;
+			color: #4f4f4f;
+			border-radius: 4px;
+		}
+	}
+}

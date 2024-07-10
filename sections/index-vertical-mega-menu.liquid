@@ -1,0 +1,679 @@
+    {% capture VerticalMegaMenu %}
+    {%- liquid
+    if section.settings.pick_menu
+    assign vertical_menu_linklist = section.settings.pick_menu
+    else
+    assign vertical_menu_linklist = 'main-menu'
+    endif
+    %}
+     
+    {%- if section.settings.pick_menu != blank -%}
+      <ul class="dt-sc-list-inline dt-nav vertical-mega-menu__nav" data-menu="dt-main-menu">       
+        {%- for link in linklists[vertical_menu_linklist].links -%}      
+        {% comment %}theme-check-disable{% endcomment %}  
+        {% render 'navigation', class: 'vertical-mega-menu__nav-item', link: link, loop: forloop.index, section: section, block: block %} 
+        {% comment %}theme-check-enable{% endcomment %}
+        {%- endfor -%}
+      </ul>
+    {%- endif -%} 
+   
+  {% endcapture %}
+ 
+<button id="init-toggle"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16">
+   
+  <path  d="M16.723,3.04H0.1V0.8H16.723V3.04Zm0.165,6.08H0.1V6.879h16.79v2.24ZM16.723,15.2H0.1v-2.24H16.723V15.2Z"/>
+</svg>{{ section.settings.side_widget_name }}</button> 
+<div class="vertical-mega-menu">
+{{ VerticalMegaMenu }} 
+</div>
+ 
+{%- style -%}
+
+#shopify-section-index-vertical-mega-menu { width: 280px; position: absolute; float: left; margin: 10px;overflow: visible;left: 0;
+    top: 193px;}
+#shopify-section-index-vertical-mega-menu > button#init-toggle { padding: 10px 20px; font-size: {{ section.settings.heading_font_size }}px; position: absolute;
+    top: -90px;
+    z-index: 30;
+    left: 100px; 
+transition:all .35s ease-in;
+  background:{{ section.settings.btn_bg }};
+                                                               }
+  #shopify-section-index-vertical-mega-menu > button#init-toggle:hover{
+    background:{{ section.settings.btn_hover_bg }};
+  }
+#shopify-section-index-vertical-mega-menu > button#init-toggle svg { width: 17px; margin-right: 1rem;height:16px; }
+
+#shopify-section-index-vertical-mega-menu > button#init-toggle:after { content: "\f107"; font-family: 'FontAwesome'; display: inline-block; margin-left: auto; 
+-webkit-transition: all cubic-bezier(.47,1.21,.47,1.21) .3s; transition: all cubic-bezier(.47,1.21,.47,1.21) .3s; }
+#shopify-section-index-vertical-mega-menu > button#init-toggle.open:after { transform: rotate(180deg); }
+
+#shopify-section-index-vertical-mega-menu > button#init-toggle,
+#shopify-section-index-vertical-mega-menu > .vertical-mega-menu { width: 100%; justify-content: space-between; margin: 0; z-index: 30; }
+#shopify-section-index-vertical-mega-menu > .vertical-mega-menu { position: absolute; width: 100%; left: 0; top: 100%; opacity: 0; visibility: hidden; background: var(--DTTertiaryColor); background:{{ section.settings.vertical_mega_menu_bg }};  transition: var(--DTBaseTransition);    left: 100px;
+    top: -46px; }
+#shopify-section-index-vertical-mega-menu > .vertical-mega-menu.open { opacity: 1; visibility: visible; }
+#shopify-section-index-vertical-mega-menu > .vertical-mega-menu ul.dt-nav { margin: 0; }
+#shopify-section-index-vertical-mega-menu > .vertical-mega-menu ul.dt-nav > li.top-level-link { width: 100%; margin: 0;     position: unset;}
+#shopify-section-index-vertical-mega-menu > .vertical-mega-menu ul.dt-nav > li > a { margin: 0; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; font-size: {{ section.settings.menu_font_size }}px; color:{{ section.settings.menu_color }} }
+  #shopify-section-index-vertical-mega-menu > .vertical-mega-menu ul.dt-nav > li > a:hover{color:{{ section.settings.menu_hover_color }}; }
+#shopify-section-index-vertical-mega-menu > .vertical-mega-menu ul.dt-nav > li > a.dropdown > .dt-sc-caret::after { font-size: 100%; transform: rotate(45deg); }
+
+#shopify-section-index-vertical-mega-menu > .vertical-mega-menu ul.dt-nav li.has-mega-menu > div.sub-menu-block { top: 0; }
+#shopify-section-index-vertical-mega-menu > .vertical-mega-menu ul.dt-nav li.has-mega-menu > div.sub-menu-block ul.sub-menu-lists ul { padding: 0; }
+#shopify-section-index-vertical-mega-menu > .vertical-mega-menu ul.dt-nav li > div.sub-menu-block { top: 0; left: calc(100% - 1px); }
+
+#shopify-section-index-vertical-mega-menu > .vertical-mega-menu ul.dt-nav li.has-mega-menu > div.sub-menu-block ul.sub-menu-lists ul.tabs-content { padding: 20px; }
+#shopify-section-index-vertical-mega-menu > .vertical-mega-menu ul.dt-nav li.has-mega-menu > div.sub-menu-block ul.sub-menu-lists ul.tabs-content ul ul { padding: 10px; }
+#shopify-section-index-vertical-mega-menu > .vertical-mega-menu ul.dt-nav li.has-mega-menu > div.sub-menu-block ul.sub-menu-lists ul.tabs-content ul ul ul li { list-style: disc inside; }
+
+#shopify-section-index-vertical-mega-menu > .vertical-mega-menu ul.dt-nav li.has-mega-menu:hover > div.sub-menu-block { top: 0px; }
+#shopify-section-index-vertical-mega-menu > .vertical-mega-menu ul.dt-nav li:hover > div.sub-menu-block { top: -5px; }
+#shopify-section-index-vertical-mega-menu > .vertical-mega-menu ul.dt-nav li:hover > div.sub-menu-block div.sub-menu-block { top: 0; }
+#shopify-section-index-vertical-mega-menu > .vertical-mega-menu ul.dt-nav li > div.sub-menu-block li > a { font-size: {{ section.settings.submenu_font_size }}px; }
+
+#shopify-section-index-vertical-mega-menu > .vertical-mega-menu ul.dt-sc-list-inline > li ul.sub-menu-lists.vertical .tabs-nav .tabs li a { padding: 15px 20px; }
+
+@media (max-width:767px) {
+
+  #shopify-section-index-vertical-mega-menu > .vertical-mega-menu ul.dt-nav { position: relative; width: 100%; left: 0; margin: auto; padding: 0; }
+  #shopify-section-index-vertical-mega-menu > .vertical-mega-menu ul.dt-nav li { opacity: 1; }
+  #shopify-section-index-vertical-mega-menu > .vertical-mega-menu ul.dt-nav li .sub-menu-block { display: none; }
+  #shopify-section-index-vertical-mega-menu > .vertical-mega-menu ul.dt-nav li:last-child { border: none; }
+  
+}
+
+  @media(max-width:1540px) and (min-width:1200px){
+    #shopify-section-index-vertical-mega-menu > button#init-toggle,
+    #shopify-section-index-vertical-mega-menu > .vertical-mega-menu{left: 30px;}
+    
+  }
+  @media(min-width:1200px) and (max-width:1399px){
+    #shopify-section-index-vertical-mega-menu > button#init-toggle { 
+    top: -78px;
+    }
+    #shopify-section-index-vertical-mega-menu > .vertical-mega-menu{top: -33px;}
+  }
+   @media(min-width:992px) {
+     #shopify-section-index-vertical-mega-menu   ul.dt-nav > li.has-mega-menu > div.sub-menu-block .dt-sc--main-menu--mega > ul{
+           display: flex;
+    padding: 30px 20px;
+       justify-content:space-between;
+    align-content: space-evenly;
+    flex-wrap: wrap;
+     }
+   }
+   @media(min-width:1200px) and (max-width:1540px){ 
+      #shopify-section-index-vertical-mega-menu > .vertical-mega-menu ul.dt-nav li.has-mega-menu:hover > div.sub-menu-block{    max-width: 800px;} 
+    }
+    @media(min-width:992px) and (max-width:1199px){ 
+      #shopify-section-index-vertical-mega-menu > .vertical-mega-menu ul.dt-nav li.has-mega-menu:hover > div.sub-menu-block{    max-width: 500px;} 
+    }
+@media(max-width:1199px){
+   #shopify-section-index-vertical-mega-menu{top:196px}
+  #shopify-section-index-vertical-mega-menu > button#init-toggle,
+  #shopify-section-index-vertical-mega-menu > .vertical-mega-menu{left: 30px;}
+  #shopify-section-index-vertical-mega-menu > button#init-toggle { 
+    top: -80px;
+    }
+    #shopify-section-index-vertical-mega-menu > .vertical-mega-menu{top: -35px;}
+}
+
+@media(max-width:991px){
+  #shopify-section-index-vertical-mega-menu{display:none}
+}
+  #shopify-section-index-vertical-mega-menu > .vertical-mega-menu ul.dt-nav > li:not(:last-child) > a{border-bottom: 1px dotted {{ section.settings.menu_color | color_modify : 'alpha', 0.15 }};}
+{%- endstyle -%}
+
+{% javascript %}
+$("#init-toggle").click(function(){
+    $(this).toggleClass('open');
+    $(".vertical-mega-menu").toggleClass('open');
+  });
+{% endjavascript %}
+
+{% schema %}
+  {
+    "name": "Vertical mega menu",
+    "settings": [
+      {
+        "type": "text",
+        "id": "side_widget_name",
+        "label": "Categories",
+        "default": "Heading"
+      },
+      {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "Heading font size",
+      "min": 14,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+      },
+      {
+      "type": "link_list",
+      "id": "pick_menu",
+      "label": "Primary Menu",
+      "default": "main-menu"
+      }, 
+      {
+      "type": "header",
+      "content": "Menu items settings"
+      },
+      {
+      "type": "range",
+      "id": "menu_font_size",
+      "label": "Parent menu font size",
+      "min": 14,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "default": 22
+      },
+      {
+      "type": "range",
+      "id": "submenu_font_size",
+      "label": "Sub menu font size",
+      "min": 14,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "default": 22
+      },
+      {
+      "type": "checkbox",
+      "id": "enable_menu_indicator",
+      "label": "Enable Menu Indicator",
+      "default": true
+      },
+      {
+      "type": "color",
+      "id": "btn_bg",
+      "label": "Button BG" 
+     },
+     {
+      "type": "color",
+      "id": "btn_hover_bg",
+      "label": "Button Hover BG"
+     },
+      {
+      "type": "color",
+      "id": "vertical_mega_menu_bg",
+      "label": "vertical mega menu bg"
+     },
+      {
+      "type": "color",
+      "id": "menu_color",
+      "label": "Menu Color"
+     },
+      {
+      "type": "color",
+      "id": "menu_hover_color",
+      "label": "Menu Hover Color"
+     }
+    ],
+"blocks": [
+  {
+  "type": "promo_image",
+  "name": "Promo image", 
+  "settings": [
+  {
+  "type": "text",
+  "id": "mega_1",
+  "label": "Map item",
+  "info": "This submenu will appear as a megamenu."
+  },
+  {
+  "type": "select",
+  "id": "mega_columns",
+  "label":"Column style",
+  "default": "four-column",
+  "options": [
+  {"value": "four-column",			"label": "4 column"}, 
+  {"value": "three-column",			"label": "3 column"},
+  {"value": "five-column",			"label": "5 column"},
+  {"value": "six-column",				"label": "6 column"},
+  {"value": "double-quarter-one-half","label": "1:1:2 column"}
+  ]
+  },
+  {
+  "type": "checkbox",
+  "id": "row_reverse",
+  "label": "Row reverse",
+  "default": false
+  },
+  {
+  "type": "header",
+  "content": "Image 1"
+  },
+  {
+  "type": "image_picker",
+  "id": "image_1",
+  "label": "Image",
+  "info": "Recommended size: 400 x 700 px"
+  },
+  {
+  "type": "text",
+  "id": "title_1",
+  "label": "Heading"
+  },
+  {
+  "type": "text",
+  "id": "button_1",
+  "label": "Button"
+  },
+  {
+  "type": "url",
+  "id": "link_1",
+  "label": "Link"
+  },
+  {
+  "type": "header",
+  "content": "Image 2"
+  },
+  {
+  "type": "image_picker",
+  "id": "image_2",
+  "label": "Image",
+  "info": "Recommended size: 400 x 700 px"
+  },
+  {
+  "type": "text",
+  "id": "title_2",
+  "label": "Heading"
+  },
+  {
+  "type": "text",
+  "id": "button_2",
+  "label": "Button"
+  },
+  {
+  "type": "url",
+  "id": "link_2",
+  "label": "Link"
+  },
+  {
+  "type": "header",
+  "content": "Image 3"
+  },
+  {
+  "type": "image_picker",
+  "id": "image_3",
+  "label": "Image",
+  "info": "Recommended size: 400 x 700 px"
+  },
+  {
+  "type": "text",
+  "id": "title_3",
+  "label": "Heading"
+  },
+  {
+  "type": "text",
+  "id": "button_3",
+  "label": "Button"
+  },
+  {
+  "type": "url",
+  "id": "link_3",
+  "label": "Link"
+  },
+  {
+  "type": "header",
+  "content": "Image 4"
+  },
+  {
+  "type": "image_picker",
+  "id": "image_4",
+  "label": "Image",
+  "info": "Recommended size: 400 x 700 px"
+  },
+  {
+  "type": "text",
+  "id": "title_4",
+  "label": "Heading"
+  },
+  {
+  "type": "text",
+  "id": "button_4",
+  "label": "Button"
+  },
+  {
+  "type": "url",
+  "id": "link_4",
+  "label": "Link"
+  }
+  ]
+  },
+  {
+  "type": "promo_banner",
+  "name": "Promo banner", 
+  "settings": [
+  {
+  "type": "text",
+  "id": "mega_1",
+  "label": "Map item",
+  "info": "This submenu will appear as a megamenu."
+  },
+  {
+  "type": "select",
+  "id": "mega_columns",
+  "label":"Column style",
+  "default": "four-column",
+  "options": [
+  {"value": "three-column",     "label": "3 column"},
+  {"value": "four-column",      "label": "4 column"},
+  {"value": "five-column",      "label": "5 column"},
+  {"value": "six-column",       "label": "6 column"},
+  {"value": "double-quarter-one-half","label": "1:1:2 column"}
+  ]
+  },
+  {
+  "type": "checkbox",
+  "id": "row_reverse",
+  "label": "Row reverse",
+  "default": false
+  },
+  {
+  "type": "header",
+  "content": "Banner 1"
+  },
+  {
+  "type": "image_picker",
+  "id": "image_1",
+  "label": "Image",
+  "info": "Recommended size: 400 x 700 px"
+  },
+  {
+  "type": "text",
+  "id": "title_1",
+  "label": "Heading"
+  },
+  {
+  "type": "text",
+  "id": "button_1",
+  "label": "Button"
+  },
+  {
+  "type": "url",
+  "id": "link_1",
+  "label": "Link"
+  },
+  {
+  "type": "header",
+  "content": "Banner 2"
+  },
+  {
+  "type": "image_picker",
+  "id": "image_2",
+  "label": "Image",
+  "info": "Recommended size: 400 x 700 px"
+  },
+  {
+  "type": "text",
+  "id": "title_2",
+  "label": "Heading"
+  },
+  {
+  "type": "text",
+  "id": "button_2",
+  "label": "Button"
+  },
+  {
+  "type": "url",
+  "id": "link_2",
+  "label": "Link"
+  }
+  ]
+  },
+  {
+  "type": "brands",
+  "name": "Brands", 
+  "settings": [
+  {
+  "type": "text",
+  "id": "mega_1",
+  "label": "Map item",
+  "info": "This submenu will appear as a megamenu."
+  },
+  {
+  "type": "select",
+  "id": "mega_columns",
+  "label":"Column style",
+  "default": "four-column",
+  "options": [
+  {"value": "three-column",     "label": "3 column"},
+  {"value": "four-column",      "label": "4 column"}, 
+  {"value": "five-column",      "label": "5 column"},
+  {"value": "six-column",       "label": "6 column"},
+  {"value": "double-quarter-one-half","label": "1:1:2 column"}
+  ]
+  },
+  
+  {
+  "type": "checkbox",
+  "id": "row_reverse",
+  "label": "Row reverse",
+  "default": false
+  },
+  {
+  "type": "image_picker",
+  "id": "image_1",
+  "label": "Brand",
+  "info": "Recommended size: 250 x 200 px"
+  },
+  {
+  "type": "url",
+  "id": "link_1",
+  "label": "Link"
+  },
+  {
+  "type": "image_picker",
+  "id": "image_2",
+  "label": "Brand",
+  "info": "Recommended size: 250 x 200 px"
+  },
+  {
+  "type": "url",
+  "id": "link_2",
+  "label": "Link"
+  },
+  {
+  "type": "image_picker",
+  "id": "image_3",
+  "label": "Brand",
+  "info": "Recommended size: 250 x 200 px"
+  },
+  {
+  "type": "url",
+  "id": "link_3",
+  "label": "Link"
+  },
+  {
+  "type": "image_picker",
+  "id": "image_4",
+  "label": "Brand",
+  "info": "Recommended size: 250 x 200 px"
+  },
+  {
+  "type": "url",
+  "id": "link_4",
+  "label": "Link"
+  },
+  {
+  "type": "image_picker",
+  "id": "image_5",
+  "label": "Brand",
+  "info": "Recommended size: 250 x 200 px"
+  },
+  {
+  "type": "url",
+  "id": "link_5",
+  "label": "Link"
+  },
+  {
+  "type": "image_picker",
+  "id": "image_6",
+  "label": "Brand",
+  "info": "Recommended size: 250 x 200 px"
+  },
+  {
+  "type": "url",
+  "id": "link_6",
+  "label": "Link"
+  },
+  {
+  "type": "image_picker",
+  "id": "image_7",
+  "label": "Brand",
+  "info": "Recommended size: 250 x 200 px"
+  },
+  {
+  "type": "url",
+  "id": "link_7",
+  "label": "Link"
+  },
+  {
+  "type": "image_picker",
+  "id": "image_8",
+  "label": "Brand",
+  "info": "Recommended size: 250 x 200 px"
+  },
+  {
+  "type": "url",
+  "id": "link_8",
+  "label": "Link"
+  },
+  {
+  "type": "image_picker",
+  "id": "image_9",
+  "label": "Brand",
+  "info": "Recommended size: 250 x 200 px"
+  },
+  {
+  "type": "url",
+  "id": "link_9",
+  "label": "Link"
+  },
+  {
+  "type": "image_picker",
+  "id": "image_10",
+  "label": "Brand",
+  "info": "Recommended size: 250 x 200 px"
+  },
+  {
+  "type": "url",
+  "id": "link_10",
+  "label": "Link"
+  }
+  ]
+  },
+  {
+  "type": "product",
+  "name": "Product", 
+  "settings": [
+  {
+  "type": "text",
+  "id": "mega_1",
+  "label": "Map item",
+  "info": "This submenu will appear as a megamenu."
+  },
+  {
+  "type": "select",
+  "id": "mega_columns",
+  "label":"Column style",
+  "default": "four-column",
+  "options":  [ 
+  {"value": "three-column",			"label": "3 column"},
+  {"value": "four-column",			"label": "4 column"},
+  {"value": "five-column",			"label": "5 column"},
+  {"value": "six-column",				"label": "6 column"},
+  {"value": "double-quarter-one-half","label": "1:1:2 column"}
+  ]
+  },
+  {
+  "type": "checkbox",
+  "id": "row_reverse",
+  "label": "Row reverse",
+  "default": false
+  },
+  {
+  "type": "product",
+  "id": "product1",
+  "label": "Product" 
+  },
+  {
+  "type": "product",
+  "id": "product2",
+  "label": "Product" 
+  },
+  {
+  "type": "product",
+  "id": "product3",
+  "label": "Product" 
+  },
+  {
+  "type": "product",
+  "id": "product4",
+  "label": "Product" 
+  } 
+  ]
+  },
+  {
+  "type": "collection",
+  "name": "Collection", 
+  "settings": [
+  {
+  "type": "text",
+  "id": "mega_1",
+  "label": "Map item",
+  "info": "This submenu will appear as a megamenu."
+  },
+  {
+  "type": "select",
+  "id": "mega_columns",
+  "label":"Column style",
+  "default": "four-column",
+  "options":  [ 
+  {"value": "three-column",			"label": "3 column"},
+  {"value": "four-column",			"label": "4 column"},
+  {"value": "five-column",			"label": "5 column"},
+  {"value": "six-column",				"label": "6 column"},
+  {"value": "double-quarter-one-half","label": "1:1:2 column"}
+  ]
+  },
+  {
+  "type": "checkbox",
+  "id": "row_reverse",
+  "label": "Row reverse",
+  "default": false
+  },
+  {
+  "type": "collection",
+  "id": "collection",
+  "label": "Collection" 
+  },
+   {
+  "type": "range",
+  "id": "limit",
+  "min": 1,
+  "max": 8,
+  "step": 1,
+  "label": "Limit",
+  "default": 5
+  },
+  {
+  "type": "range",
+  "id": "slides_per_view",
+  "min": 1,
+  "max": 4,
+  "step": 1,
+  "label": "Slide per view",
+  "default": 1
+  }
+  ]
+  }  
+  ]
+  }
+{% endschema %}
+

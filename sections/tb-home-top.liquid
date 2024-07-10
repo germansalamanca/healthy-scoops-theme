@@ -1,0 +1,66 @@
+<!-- Starts Video Cover -->
+<section class="tb-videoCover wow fadeIn">
+  <video autoplay muted loop id="videoCover">
+    <source src="https://www.tigerbid.co/hs/arepas.mp4" type="video/mp4">
+  </video>
+  <div class="tb-overlay">
+    <img src="{{ 'txt-video-cover.png' | asset_url }}" class="tb-txt wow fadeInUp" alt="Made from the heart">
+  </div>
+</section>
+<!-- Ends Video cover -->
+
+<!-- Featured categories starts -->
+<section class="tb-featuredCats">
+  <img
+    src="{{ 'tb-logo-circle.png' | asset_url }}"
+    class="tb-circle-logo wow"
+    alt="Healty Scoops"
+    width="186"
+    height="186"
+  >
+  <div class="tb-container">
+    <h2 class="wow fadeIn">Healthy nutrition for a happier life</h2>
+    <h3 class="tb-section-title wow fadeIn">Shop by Categories</h3>
+    <div class="tb-grid tb-grid-3">
+      <a href="#" class="tb-feat-cat arepas wow fadeInUp">
+        <h4 class="tb-title">
+          Arepas and<br>
+          Empanadas
+        </h4>
+        <span class="tb-cta">View all</span>
+      </a>
+      <a href="#" class="tb-feat-cat chicken wow fadeInUp">
+        <h4 class="tb-title">
+          Chicken meat<br>
+          and turkey
+        </h4>
+        <span class="tb-cta">View all</span>
+      </a>
+      <a href="#" class="tb-feat-cat soups wow fadeInUp">
+        <h4 class="tb-title">
+          Soups and<br>
+          Lasagnas
+        </h4>
+        <span class="tb-cta">View all</span>
+      </a>
+    </div>
+  </div>
+</section>
+<!-- Ends Featured categories -->
+
+{% schema %}
+{
+  "name": "Home sections Top",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Home sections Top",
+      "category": "ADVANCED LAYOUT"
+    }
+  ]
+}
+{% endschema %}
+{% stylesheet %}
+{% endstylesheet %}
+{% javascript %}
+{% endjavascript %}

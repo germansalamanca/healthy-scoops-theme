@@ -1,0 +1,158 @@
+@use "variables" as *;
+
+section.tb-differentiators{
+	background-color: $yellow-orange;
+	padding: 4rem 0 4rem;
+	.tb-container{
+		position: relative;
+	}
+	h2{
+		position: relative;
+		z-index: 4;
+	}
+	.tb-description{
+		position: relative;
+		z-index: 4;
+		max-width: 500px;
+		margin: 0 auto 3.4rem;
+		text-align: center;
+		font-family: $font-family;
+		font-size: 17px;
+		line-height: 1.4;
+		font-weight: normal;
+	}
+	.tb-grid{
+		grid-gap: 1.4rem;
+	}
+	.tb-decorative{
+		z-index: 0;
+		&.left{
+			width: 160px;
+			height: 230px;
+			background-image: url(#{$img-url}tb-diff-bg-left.png);
+			animation-delay: .7s;
+			top: -4%;
+			left: -20%;
+			@media only screen and (min-width: $sm){
+				width: 188px;
+				height: 271px;
+				top: 4%;
+				left: -8%;
+			}
+			@media only screen and (min-width: $md){
+				width: 227px;
+				height: 326px;
+				top: 1%;
+				left: -8%;
+			}
+			@media only screen and (min-width: $lg){
+				top: 46%;
+				left: -13%;
+			}
+		}
+		&.right{
+			width: 348px;
+			height: 305px;
+			width: 171px;
+			height: 150px;
+			top: 11%;
+			right: -10%;
+			background-image: url(#{$img-url}tb-diff-bg-right.png);
+			animation-delay: .5s;
+			@media only screen and (min-width: $sm){
+				width: 243px;
+				height: 213px;
+				top: 13%;
+				right: -15%;
+			}
+			@media only screen and (min-width: $lg){
+				top: 15%;
+				right: -6%;
+			}
+		}
+	}
+}
+
+
+
+.tb-flipCard{
+	position: relative;
+	background-color: white;
+	padding: 1.6rem 1.4rem 1rem 1.4rem;
+	overflow: hidden;
+	border-radius: 18px;
+	display: flex;
+	flex-direction: column;
+	cursor: pointer;
+	transition: $transition;
+	img{
+		position: relative;
+		left: 0;
+		margin: .6rem auto 1.6rem;
+		display: block;
+		object-fit: cover;
+		width: 216px;
+		height: 216px;
+		max-width: 100%;
+		border-radius: 100%;
+		transition: $transition-med;
+	}
+	.tb-title{
+		position: relative;
+		color: #181B31;
+		font-weight: bold;
+		font-family: $font-family;
+		font-size: 22px;
+		line-height: 1.2;
+		margin: 0 0 2.4rem;
+		transition: $transition-med;
+		span{
+			opacity: 0;
+			transition: $transition-slow;
+		}
+	}
+	.tb-excerpt{
+		position: relative;
+		opacity: 0;
+		color: white;
+		font-family: $font-family;
+		font-size: 1rem;
+		line-height: 1.5;
+		margin: 0;
+		height: 1rem;
+		transition: $transition-med;
+	}
+	&:hover, &.active{
+
+		img{
+			opacity: .5;
+			width: 160px;
+			height: 160px;
+			left: 20%;
+			margin-top: 0;
+			margin-bottom: -70px;
+		}
+		.tb-title{
+			span{
+				opacity: 1;
+			}
+		}
+		.tb-excerpt{
+			height: 4rem;
+			opacity: 1;
+		}
+		&:nth-child(1){
+			background-color: $orange;
+		}
+		&:nth-child(2){
+			background-color: $orange;
+		}
+		&:nth-child(3){
+			background-color: $orange;
+		}
+		&:nth-child(4){
+			background-color: $orange;
+		}
+	}
+}
+

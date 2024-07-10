@@ -1,0 +1,128 @@
+@use "variables"as *;
+
+.tb-about-history {
+    background-color: #6DA63B;
+    padding: 6rem 0;
+    @media (width <=$sm){
+        padding: 2rem 0 4rem    ;
+    }
+    &-bSeeds{
+        background-image: url(#{$img-url}tb-seeds-black.svg);
+        width: 58.75px;
+        height: 61.2px;
+        top: 0;
+        right: 43%;
+    }
+    &-sCircle{
+        background-image: url(#{$img-url}tb-complete-circle.svg);
+        width: 225.61px;
+        height: 234.12px;
+        right: 8%;
+        top: 5%;
+        z-index: 1;
+        @media (width <=$sm){
+            width: 112px;
+            height: 117.06px;
+            right:0%;
+            top: 7%;
+        }
+    }
+    &-bCircle{
+        background-image: url(#{$img-url}tb-big-circle.svg);
+        width: 360px;
+        height: 374px;
+        z-index: 1;
+        left: 50%;
+        top: 20%;
+        transform: translateX(-50%);
+        @media (width <=$sm){
+            width: 250px;
+            height: 227px;
+        }
+    }
+    &-wSeeds{
+        background-image: url(#{$img-url}tb-white-seeds.svg);
+        right: 2%;
+        width: 52px;
+        height: 65px;
+        top: 45%;
+        @media (width <=$sm){
+            display: none;
+        }
+    }
+    &-petal{
+        background-image: url(#{$img-url}tb-leaft-white.svg);
+        width: 137px;
+        height: 179px;
+        z-index: 1;
+        top: 45%;
+        left: 2%;
+        @media (width <=$sm){
+            display: none;
+        }
+    }
+    &-text{
+        background-image: url(#{$img-url}tb-single-made.svg);
+        width: 385px;
+        height: 71px;
+        bottom: 3%;
+        left: 0;
+        @media (width <=$sm){
+            width: 100%;
+            bottom: -6%;
+        }
+        @media (width <=$md){
+            bottom: 0%;
+        }
+    }
+
+    .tb-container {
+        display: flex;
+        gap: 67px;
+        @media (width <=$iP){
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+        }
+
+        .tb-col {
+            &-left {
+                width: 685px;
+                padding: 3.813rem 2.063rem 0 5.625rem;
+                position: relative;
+                @media (width <=$iP){
+                    width: 100%;
+                    padding: 50px 0 0 0 ;
+                    display: flex;
+                    justify-content: center;
+                }
+                img{
+                    position: relative;
+                    z-index: 2;
+                }
+            }
+
+            &-right {
+                width: 325px;
+                @media (width <=$iP){
+                    width: 100%;
+                }
+                h2 {
+                    color: #293820;
+                    font-size: 3.125rem;
+                }
+
+                p {
+                    font-size: 1.125rem;
+                    padding-left: 1.75rem;
+                    color: white;
+                    font-style: italic;
+                    line-height: 30px;
+                    @media (width <=$iP){
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,289 @@
+{% if section.settings.display_recent_purchase %}
+<ul class="customer-who-purchased text-{{ section.settings.placement }}">
+  {% for block in section.blocks %}    
+  {%- assign product = all_products[block.settings.product] -%}
+  <li class="product-data">
+    <a href="{{ product.url | within: collection }}">      
+    <img
+      srcset="{%- if product.featured_media.width >= 165 -%}{{ product.featured_media | image_url: width: 165 }} 165w,{%- endif -%}
+          {%- if product.featured_media.width >= 360 -%}{{ product.featured_media | image_url: width: 360 }} 360w,{%- endif -%}
+          {%- if product.featured_media.width >= 533 -%}{{ product.featured_media | image_url: width: 533 }} 533w,{%- endif -%}
+          {%- if product.featured_media.width >= 720 -%}{{ product.featured_media | image_url: width: 720 }} 720w,{%- endif -%}
+          {%- if product.featured_media.width >= 940 -%}{{ product.featured_media | image_url: width: 940 }} 940w,{%- endif -%}
+          {%- if product.featured_media.width >= 1066 -%}{{ product.featured_media | image_url: width: 1066 }} 1066w,{%- endif -%}
+          {{ product.featured_media | image_url }} {{ product.featured_media.width }}w"
+      src="{{ product.featured_media | image_url: width: 200 }}"
+      sizes="(min-width: {{ settings.container_width }}px) {{ settings.container_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 3), (min-width: 480px) calc((100vw - 120px) / 2), calc((100vw - 35px) / 2)"
+      alt="{{ product.featured_media.alt }}"
+      loading="lazy"
+      class="motion-reduce featured-image teaser"
+      width="{{ product.featured_media.width }}"
+      height="{{ product.featured_media.height }}"
+      >
+      <span class="title">{{ product.title | truncatewords: 5 }}</span>
+    </a>
+    <p><span class="purchased">{{ section.settings.text }}</span>{{ 'layout.customer.from' | t }}<span class="location">{{ block.settings.from }}</span><span class="timing">{{ block.settings.time }}</span></p>  
+    <a href="javascript:void(0)" title="Close" class="dT_close">
+      {% render 'icon-close' %}
+    </a>
+  </li>           
+  {% endfor %}
+</ul>
+
+
+<script type="text/javascript">
+  if ($.cookie('dT_suggested-cookie') == 'closed') {
+    $('.customer-who-purchased').remove();
+  }
+
+  $('.dT_close').bind('click',function(){
+    $('.customer-who-purchased').remove();
+    $.cookie('dT_suggested-cookie', 'closed', {expires:1, path:'/'});
+  });      
+
+  var elements = $('.customer-who-purchased li');
+  var init_element = 0;
+  var i = 0;  
+  elements.removeClass('active');
+  function fadeInRandomElement() { 
+    if ( i % 2 == 0) {
+      var currentItem = elements.eq(init_element);      
+      currentItem.addClass('active');
+      setTimeout(function(){ 
+        currentItem.removeClass('active')
+      }, 4000);
+
+      init_element++;
+      if(elements.length == init_element) {
+        init_element = 0;
+      }
+    }
+    i++;
+  }
+
+  setInterval(function(){ 
+    fadeInRandomElement();
+  }, 2000);
+
+
+</script>
+{% endif %}
+<style type="text/css">
+
+/** @format */
+
+.customer-who-purchased {
+	pointer-events: none;
+	margin: 0;
+	height: 100px;
+	max-width: 500px;
+	min-width: 400px;
+	position: fixed;
+	bottom: 35px;
+	width: auto;
+	z-index: 3;
+	-webkit-transition: var(--DTBaseTransition);
+	transition: var(--DTBaseTransition);
+}
+
+.customer-who-purchased.text-left {
+	left: 35px;
+}
+
+.customer-who-purchased.text-right {
+	right: 35px;
+}
+
+.customer-who-purchased .product-data {
+	display: block;
+	height: auto;
+	margin: 25px 10px;
+	opacity: 0;
+	padding: 15px 25px 15px 95px;
+	position: absolute;
+	bottom: -35px;
+	left: 0;
+	visibility: hidden;
+	width: auto;
+	border-radius: var(--DTRadius);
+	-webkit-transition: all cubic-bezier(.47,1.21,.47,1.21) .3s;
+	transition: all cubic-bezier(.47,1.21,.47,1.21) .3s;
+}
+
+.customer-who-purchased .product-data:before {
+	background-color:{{ section.settings.bg_color }};
+	content: "";
+	display: block;
+	height: auto;
+	margin: -15px -25px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	width: auto;
+	z-index: -1;
+	border-radius: var(--DTRadius);
+	-webkit-box-shadow: 0 0 10px {{ settings.shadow_color | color_modify: 'alpha', 0.15 }};
+	box-shadow: 0 0 10px {{ settings.shadow_color | color_modify: 'alpha', 0.15 }};
+}
+
+.customer-who-purchased .product-data.active
+/*   ,.customer-who-purchased .product-data:hover  */
+  {
+	pointer-events: all;
+	opacity: 1;
+	bottom: 0;
+	visibility: visible;
+}
+
+  .customer-who-purchased .product-data p {
+    margin-bottom: 5px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+.customer-who-purchased .product-data p span {
+	display: inline;
+	padding: 3px;
+}
+
+  .customer-who-purchased .product-data span.title {
+    font-size: var(--DTFontSize_H6);
+      font-weight: 500;
+}
+  
+  
+/* .customer-who-purchased .product-data span.title,
+.customer-who-purchased .product-data p span.location {
+	font-weight: 600;
+} */
+
+.customer-who-purchased .product-data p span.purchased {
+	padding-left: 0;
+}
+
+  .customer-who-purchased .product-data p span.timing {
+    font-size: 12px;
+    font-weight:400;
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    color: var(--DTSecondaryColor);
+      }
+
+.customer-who-purchased .product-data > a img {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 75px;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+  .customer-who-purchased .product-data .dT_close {
+    height: 12px;
+    position: absolute;
+    right: -2px;
+    top: 10px;
+    text-align: center;
+    width: 12px;
+    pointer-events: all;
+    border-radius: var(--DTRadius);
+      -webkit-transform: translate(25%, -50%);
+      transform: translate(25%, -50%);
+      }
+
+.customer-who-purchased .product-data .dT_close svg {
+	height: 1em;
+	margin: auto;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 1em;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	-webkit-transition: inherit;
+	transition: inherit;
+}
+
+@media (max-width: 576px) {
+	.customer-who-purchased {
+		max-width: 90%;
+		min-width: 90%;
+		left: 0 !important;
+		right: 0 !important;
+		margin: auto;
+	}
+}
+
+</style>
+
+{% schema %}
+{
+"name": "Recently purchased",
+"class": "customer-purchased",
+"settings": [
+{
+"type" : "checkbox",
+"id" : "display_recent_purchase",
+"label" : "Display customer who recently purchased",
+"default" : true
+},        
+{
+"type": "radio",
+"id": "placement",
+"label": "Widget position",
+"options": [
+{
+"value": "left",
+"label": "Left"
+},
+{
+"value": "right",
+"label": "Right"
+}
+],
+"default": "right"        
+},        
+{
+"type" : "textarea",
+"id" : "text",
+"label" : "Text", 
+"default" : "Someone recently bought a"
+},
+  {
+"type": "color",
+"id": "bg_color",
+"label": "Bg Color",
+"default": "#206469"
+}
+],
+"blocks" : [
+{
+"type" : "image",
+"name" : "Product",
+"settings":[
+{
+"type" : "product",
+"id" : "product",
+"label" :"Select Product"
+},
+{
+"type" : "text",
+"id" : "from",
+"default" : "Texas, US",
+"label" : "Location"
+},
+{
+"type" : "text",
+"id" : "time",
+"default" : "10 minutes ago",
+"label" : "Time"
+}				
+]
+}
+]
+}
+{% endschema %}
+

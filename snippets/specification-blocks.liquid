@@ -1,0 +1,63 @@
+{% if block.type == 'icon' %}
+<div class="dt-sc-support-block {{ section.settings.specification_block_style }} {{ section.settings.text_position }} {% if block.settings.reverse_column %}dt-sc-reverse-columns{% endif %}
+     {% if section.settings.specification_style == 'style3' %}{{ section.settings.additional_content_position | escape }}{% endif %}">    
+  {% if block.settings.icon != blank %}
+  <div class="wow fadeIn dt-sc-support-icon-image">    
+  <img
+    srcset="{%- if block.settings.icon.width >= 275 -%}{{ block.settings.icon | image_url: width: 275 }} 275w,{%- endif -%}
+    {%- if block.settings.icon.width >= 550 -%}{{ block.settings.icon | image_url: width: 550 }} 550w,{%- endif -%}
+    {%- if block.settings.icon.width >= 710 -%}{{ block.settings.icon | image_url: width: 710 }} 710w,{%- endif -%}
+    {%- if block.settings.icon.width >= 1420 -%}{{ block.settings.icon | image_url: width: 1420 }} 1420w,{%- endif -%}
+    {{ block.settings.icon | image_url }} {{ block.settings.icon.width }}w"
+    src="{{ block.settings.icon | image_url: width: 550 }}"
+    sizes="(min-width: 990px) {% if section.blocks.size <= 2 %}710px{% else %}550px{% endif %},
+    (min-width: 750px) {% if section.blocks.size == 1 %}710px{% else %}550px{% endif %}, calc(100vw - 30px)"
+    alt="{{ block.settings.icon.alt }}"
+    height="{{ block.settings.icon.height }}"
+    width="{{ block.settings.icon.width }}"
+    loading="lazy"
+  >             
+  </div>
+  {% endif %}     
+ <div class="wow fadeIn dt-sc-support-content">
+    {% if block.settings.title != blank %}  
+    {% if block.settings.link != blank %}
+    <h5 class="dt-sc-support-heading"><a href="{{ block.settings.link }}">{{ block.settings.title }}</a></h5>
+    {% else %}
+       <h5 class="dt-sc-support-heading">{{ block.settings.title }}</h5>
+    {% endif %} 
+    {% endif %} 
+    {% if block.settings.desc != blank %}  
+    <p class="dt-sc-support-description">{{ block.settings.desc }}</p>
+    {% endif %}
+    {% if block.settings.link != blank and block.settings.link_text != blank %}
+    <a href="{{ block.settings.link }}" class="dt-sc-btn">{{ block.settings.link_text }}</a>
+    {% endif %}
+  </div>
+</div>
+{% endif %}
+{% if block.type == 'class' %}
+<div class="dt-sc-support-block {{ section.settings.specification_block_style }} {{ section.settings.text_position }} {% if block.settings.reverse_column %}dt-sc-reverse-columns{% endif %}
+ {% if section.settings.specification_style == 'style3' %}{{ section.settings.additional_content_position | escape }}{% endif %}">
+  {% if block.settings.class != blank %}
+  <div class="wow fadeIn dt-sc-support-icon-image">
+    <i class="{{ block.settings.class }}"></i>
+  </div>
+  {% endif %}     
+  <div class="wow fadeIn dt-sc-support-content">
+    {% if block.settings.title != blank %}  
+    {% if block.settings.link != blank %}
+    <h5 class="dt-sc-support-heading"><a href="{{ block.settings.link }}">{{ block.settings.title }}</a></h5>
+    {% else %}
+       <h5 class="dt-sc-support-heading">{{ block.settings.title }}</h5>
+    {% endif %} 
+    {% endif %} 
+    {% if block.settings.desc != blank %}  
+    <p class="dt-sc-support-description">{{ block.settings.desc }}</p>
+    {% endif %}
+    {% if block.settings.link != blank and block.settings.link_text != blank %}
+    <a href="{{ block.settings.link }}" class="dt-sc-btn">{{ block.settings.link_text }}</a>
+    {% endif %}
+  </div>
+</div>
+{% endif %}

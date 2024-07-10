@@ -1,0 +1,39 @@
+
+$green: #6DA63B;
+$green-dark: #293820;
+$hueso: #F7F6F1;
+$orange: #EF8524;
+$yellow-orange: #F7B727;
+
+$text-dark: $green-dark;
+$primary: var(--tb-primary);
+$bg-light: var(--tb-bgLight);
+
+$text-color: var(--tb-textColor);
+
+// Fonts
+$font-family: 'Visby CF', Helvetica, sans-serif;
+
+// Files
+$img-url: '';
+
+$transition: all ease .3s;
+$transition-med: all ease .45s;
+$transition-slow: all ease .6s;
+
+// LAYOUT
+// Breakpoints
+$xs: 350px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$iP: 1024px;
+$sxl: 1140px;
+$xl: 1200px;
+$xxl: 1400px;
+
+// Container
+$container-padding: 1rem;
+$container-width: 1230px;
+$container-width-lg: 1034px;
+$container-width-md: 700px;

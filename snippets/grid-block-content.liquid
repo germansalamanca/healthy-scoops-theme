@@ -1,0 +1,80 @@
+<{% if block.settings.block_button_link != blank %}a href="{{ block.settings.block_button_link}}"{% else %}div{% endif %} class="dt-sc-grid-banner {{ grid_style }} {{ list_style }} {{ overlay_style }} {% if block.settings.reverse_column %}dt-sc-reverse-columns{% endif %} {{ block.type }}-{{ block.id }}">      
+  {% if block.settings.show_image %}
+  <div class="dt-sc-grid-banner-image {{ overlay_class }}">
+    {% if block.settings.block_image != blank %}    
+    {%- capture sizes -%}(min-width: 990px) {% if section.blocks.size <= 2 %}710px{% else %}550px{% endif %}, (min-width: 750px) {% if section.blocks.size == 1 %}710px{% else %}550px{% endif %}, calc(100vw - 30px){%- endcapture -%}
+                    {{ block.settings.block_image | image_url: width: 1420 | image_tag:
+                      loading: 'lazy',
+                      sizes: sizes,
+                      widths: '275, 550, 710, 1420',
+                      class: 'wow fadeInRight'
+                    }}
+    {% else %}
+    {{ 'image' | placeholder_svg_tag: 'placeholder_svg' }}
+    {% endif %}  
+  </div>
+  {% endif%}         
+  {% if block.settings.block_title != blank or  block.settings.block_sub_title != blank or  block.settings.block_description != blank or  block.settings.block_button_link != blank %}
+  <div class="wow fadeInLeft dt-sc-grid-banner-content 
+              {% unless section.settings.block_banner_style == 'grid' %} {{ block.settings.content_position }}{% endunless %}
+              {% if section.settings.block_banner_style == 'grid' %}{{ block.settings.block_text_align }}{% endif %}">
+    {% unless section.settings.block_banner_style == 'grid' %}
+    <div class="dt-sc-grid-banner-inner {{ block.settings.block_text_align }}">
+      {% endunless %}
+      {% unless section.settings.block_banner_style == 'grid' %}
+    <div class="dt-sc-grid-banner-inner-content {{ block.settings.block_text_align }}">
+      {% endunless %}
+      {% if block.settings.block_sub_title != blank %}
+      <h5 class="dt-sc-sub-title">{{ block.settings.block_sub_title }}</h5>
+      {% endif %}
+
+      {% if block.settings.use_title_link %}
+      {% if block.settings.block_title != blank  and  block.settings.block_button_link != blank %}
+
+      <h3 class="dt-sc-main-title" data-letters="{{ block.settings.block_title }}"> <span data-letters="{{ block.settings.block_title}}"> {{ block.settings.block_title }} </span></h3>
+      {% endif %}
+      {% else %}
+      <h3 class="dt-sc-main-title">{{ block.settings.block_title }}</h3>
+      {% endif %}
+      {% if block.settings.block_description != blank %}
+      <p class="dt-sc-description">{{ block.settings.block_description }}</p>
+      {% endif %}
+      
+      {% unless block.settings.enable_button_link %}
+      {% if block.settings.block_button_link != blank and block.settings.block_button_text != blank %}
+      <button  class="dt-sc-btn custom_button">{{ block.settings.block_button_text }}</button>
+      {% endif %}
+      {% endunless %}
+      
+      {% if block.settings.enable_button_link_2 %}
+      <div class="multiple-buttons"> 
+        {% if block.settings.block_button_link != blank %}
+        <button href="{{ block.settings.block_button_link }}" class="dt-sc-btn">{{ block.settings.block_button_text }}</button>
+        {% endif %}
+        {% if block.settings.block_button_link_2 != blank %}
+        <button href="{{ block.settings.block_button_link_2 }}" class="dt-sc-btn secondary">{{ block.settings.block_button_text_2 }}</button>
+        {% endif %}
+      </div>
+      {% endif %}
+    {% unless section.settings.block_banner_style == 'grid' %}</div>{% endunless %}
+{% if block.settings.show_image2 %}
+      <div class="dt-sc-overlay-img2">
+       {% if block.settings.block_image2 != blank %}
+    {%- capture sizes -%}(min-width: 990px) {% if section.blocks.size <= 2 %}710px{% else %}550px{% endif %}, (min-width: 750px) {% if section.blocks.size == 1 %}710px{% else %}550px{% endif %}, calc(100vw - 30px){%- endcapture -%}
+                    {{ block.settings.block_image2 | image_url: width: auto | image_tag:
+                      loading: 'lazy',
+                      sizes: sizes,
+                      widths: '275, 550, 710, 1420',
+                      class: 'wow fadeInRight'
+                    }}
+    {% else %}
+    {{ 'image' | placeholder_svg_tag: 'placeholder_svg' }}
+    {% endif %}  
+      </div>
+    {% endif %}
+      {% unless section.settings.block_banner_style == 'grid' %}</div>{% endunless %}
+    
+  </div>
+  {% endif%} 
+   
+</{% if block.settings.block_button_link != blank %}a href="{{ block.settings.block_button_link}}"{% else %}div{% endif %}>

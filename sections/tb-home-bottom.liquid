@@ -1,0 +1,95 @@
+		<!-- Starts FAQ -->
+		 <section class="tb-faq">
+			<div class="tb-container tb-container-title tb-pos-r">
+				<h2 class="tb-section-title">FAQ</h2>
+			</div>
+			<div class="tb-container tb-cols tb-pos-r">
+				<div class="tb-decorative left wow fadeInLeft"></div>
+				<div class="tb-decorative right wow fadeInUp"></div>
+				<div class="tb-col tb-col-left tb-pos-r">
+					<div class="tb-accordion">
+						<header>Our Values</header>
+						<div class="tb-content">
+							<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+						</div>
+					</div>
+					<div class="tb-accordion">
+						<header>Our Philosophy</header>
+						<div class="tb-content">
+							<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+						</div>
+					</div>
+					<div class="tb-accordion">
+						<header>Our Mission</header>
+						<div class="tb-content">
+							<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+						</div>
+					</div>
+					<div class="tb-accordion">
+						<header>Our Goals</header>
+						<div class="tb-content">
+							<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+						</div>
+					</div>
+				</div>
+				<div class="tb-col tb-col-right tb-pos-r">
+					<div class="tb-accordion">
+						<header>Our Values</header>
+						<div class="tb-content">
+							<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+						</div>
+					</div>
+					<div class="tb-accordion">
+						<header>Our Philosophy</header>
+						<div class="tb-content">
+							<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie.</p>
+						</div>
+					</div>
+					<div class="tb-accordion">
+						<header>Our Mission</header>
+						<div class="tb-content">
+							<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+						</div>
+					</div>
+					<div class="tb-accordion">
+						<header>Our Goals</header>
+						<div class="tb-content">
+							<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		 </section>
+		 <script>
+			const accordions = document.querySelectorAll('.tb-accordion')
+			accordions.forEach(accordion => {
+				const header = accordion.querySelector('header')
+				header.addEventListener('click', ()=>{
+					const panel = accordion.querySelector('.tb-content')
+					accordion.classList.toggle('active')
+					if (panel.style.maxHeight) {
+						panel.style.maxHeight = null;
+					} else {
+						panel.style.maxHeight = panel.scrollHeight + "px";
+					}
+				})
+			});
+		 </script>
+		<!-- Ends FAQ --> 
+
+{% schema %}
+{
+  "name": "Home Sections Bottom",
+  "settings": [],
+  "presets": [
+{
+  "name": "Home Sections Bottom",
+  "category": "ADVANCED LAYOUT"
+}
+]
+}
+{% endschema %}
+{% stylesheet %}
+{% endstylesheet %}
+{% javascript %}
+{% endjavascript %}
