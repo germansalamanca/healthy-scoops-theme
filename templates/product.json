@@ -97,6 +97,7 @@
         },
         "eb047868-0a93-41ba-b2c1-1eb075fe6b77": {
           "type": "CMS",
+          "disabled": true,
           "settings": {
             "title": "Faq's",
             "page_content": ""
