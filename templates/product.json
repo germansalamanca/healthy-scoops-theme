@@ -102,13 +102,6 @@
             "page_content": "faq-tab"
           }
         },
-        "7d4c4ec4-d335-4e09-bec5-b2cbc5adc447": {
-          "type": "CMS",
-          "settings": {
-            "title": "Nutrition Facts",
-            "page_content": ""
-          }
-        },
         "f14720d8-dc3c-44a3-8bfa-cea5cf644d9d": {
           "type": "text",
           "settings": {
@@ -154,7 +147,6 @@
         "abe6528b-336c-4949-8ad4-f133c1f33c49",
         "5d1eb96d-9f94-4643-a16b-63e55d8e3587",
         "eb047868-0a93-41ba-b2c1-1eb075fe6b77",
-        "7d4c4ec4-d335-4e09-bec5-b2cbc5adc447",
         "f14720d8-dc3c-44a3-8bfa-cea5cf644d9d",
         "591b15f5-a7e8-4c6d-bc8c-d8c74e98a085"
       ],
