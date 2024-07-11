@@ -479,7 +479,7 @@
           "menu_AB3ieX": {
             "type": "menu",
             "settings": {
-              "title": "Footer menu",
+              "title": "",
               "menu": "footer",
               "container_width": 20,
               "column_alignment": "text-start",
