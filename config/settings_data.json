@@ -472,18 +472,8 @@
               "footer_btn_hover_bg": "rgba(0,0,0,0)",
               "logo": "shopify:\/\/shop_images\/logo_511fb748-20eb-4e9a-b034-3e2699ab0da2.png",
               "footer_logo_height": 86,
-              "container_width": 15,
+              "container_width": 25,
               "column_alignment": "text-start"
-            }
-          },
-          "menu_AB3ieX": {
-            "type": "menu",
-            "settings": {
-              "title": "",
-              "menu": "footer",
-              "container_width": 20,
-              "column_alignment": "text-start",
-              "footer_menu_style": "vertical"
             }
           },
           "f16b90cf-8c84-4851-ab0b-dfa45605dc67": {
@@ -498,10 +488,20 @@
               "footer_office_hours_label": "",
               "footer_contact_id": "info@example.com",
               "footer_email_label": "",
-              "container_width": 32,
+              "container_width": 25,
               "column_alignment": "text-start",
               "enable_address_icons": false,
               "enable_address_label": false
+            }
+          },
+          "menu_AB3ieX": {
+            "type": "menu",
+            "settings": {
+              "title": "",
+              "menu": "footer",
+              "container_width": 20,
+              "column_alignment": "text-start",
+              "footer_menu_style": "vertical"
             }
           },
           "newsletter_HJPUrm": {
@@ -513,7 +513,7 @@
               "newsletter_btn_bg": "#6da63b",
               "newsletter_btn_hover_color": "#ffffff",
               "newsletter_btn_hover_bg": "#f9b827",
-              "container_width": 24,
+              "container_width": 28,
               "column_alignment": "text-start"
             }
           },
@@ -540,8 +540,8 @@
         },
         "block_order": [
           "f0025e97-6242-48b4-933a-9a95139aac46",
-          "menu_AB3ieX",
           "f16b90cf-8c84-4851-ab0b-dfa45605dc67",
+          "menu_AB3ieX",
           "newsletter_HJPUrm",
           "e3d85680-5abc-4607-9270-0584b2444e88",
           "937fe6b7-99d2-4b67-9730-2ad20f1902cf"
