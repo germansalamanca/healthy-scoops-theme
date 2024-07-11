@@ -1752,5 +1752,6 @@ body .tb-about-hero .tb-decorative.right {
   margin-bottom: 0.5rem;
 }
 .site-footer .footer__newsletter input {
-  background-color: #EEEEEE;
+  background-color: rgba(238, 238, 238, 0.3490196078);
+  color: white;
 }
