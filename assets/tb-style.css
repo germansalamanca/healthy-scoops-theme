@@ -1744,6 +1744,10 @@ body .tb-about-hero .tb-decorative.right {
   border: 1px solid #ededed;
 }
 
+.site-footer .footer__title {
+  font-size: 20px;
+  margin-bottom: 0.3rem !important;
+}
 .site-footer .footer-logo img {
   width: 177.74px !important;
   height: 69.41px !important;
@@ -1753,5 +1757,11 @@ body .tb-about-hero .tb-decorative.right {
 }
 .site-footer .footer__newsletter input {
   background-color: #4e5749;
-  color: white;
+  border-radius: 120px;
+}
+.site-footer .footer__newsletter-btn {
+  border-radius: 120px !important;
+  padding-left: 2px !important;
+  padding-right: 0px !important;
+  width: 49px !important;
 }

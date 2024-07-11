@@ -35,6 +35,10 @@
 
 // Footer 
 .site-footer{
+	.footer__title{
+		font-size: 20px;
+		margin-bottom: 0.3rem !important;
+	}
 	.footer-logo{
 		img{
 			width: 177.74px !important;
@@ -45,9 +49,19 @@
 		p{
 			margin-bottom: 0.5rem;
 		}
+
 	}
-	.footer__newsletter input{
-		background-color: #4e5749;
-		color: white;
+	.footer__newsletter{
+		input{
+			background-color: #4e5749;
+			border-radius: 120px;
+		}
+		&-btn{
+			border-radius: 120px !important;
+			padding-left: 2px !important;
+			padding-right: 0px !important;
+			width: 49px !important;
+		}
 	}
+
 }
