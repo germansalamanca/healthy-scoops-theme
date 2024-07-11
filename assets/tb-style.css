@@ -1770,10 +1770,26 @@ body .tb-about-hero .tb-decorative.right {
 .site-footer .footer__newsletter input {
   background-color: #4e5749;
   border-radius: 120px;
+  transition: all ease 0.3s;
 }
 .site-footer .footer__newsletter-btn {
   border-radius: 120px !important;
   padding-left: 2px !important;
   padding-right: 0px !important;
   width: 49px !important;
+}
+
+.dt-sc-blog-description ul {
+  padding-left: 1rem;
+}
+.dt-sc-blog-description ul li {
+  list-style: disc;
+  padding-left: 0.2rem;
+}
+.dt-sc-blog-description ol {
+  padding-left: 1rem;
+}
+.dt-sc-blog-description ol li {
+  list-style: inherit;
+  padding-left: 0.4rem;
 }
