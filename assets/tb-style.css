@@ -1743,3 +1743,8 @@ body .tb-about-hero .tb-decorative.right {
   border-radius: 4px;
   border: 1px solid #ededed;
 }
+
+.site-footer .footer-logo img {
+  width: 177.74px !important;
+  height: 69.41px !important;
+}
