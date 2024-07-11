@@ -1615,7 +1615,7 @@ body .tb-about-hero .tb-decorative.right {
   }
 }
 .tb-about-carousel .appetizers .swiper-button-prev {
-  left: 0;
+  left: 10px;
 }
 @media (width <= 1024px) {
   .tb-about-carousel .appetizers .swiper-button-next {
@@ -1672,6 +1672,13 @@ body .tb-about-hero .tb-decorative.right {
   width: 426px;
   padding-left: 60px;
 }
+@media only screen and (min-width: 768px) {
+  .tb-about-carousel .tb-col-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 @media (width <= 1024px) {
   .tb-about-carousel .tb-col-left {
     width: 100%;
@@ -1711,6 +1718,11 @@ body .tb-about-hero .tb-decorative.right {
 .tb-about-carousel .tb-col-right img {
   position: relative;
   z-index: 2;
+}
+@media only screen and (min-width: 768px) {
+  .tb-about-carousel .tb-col-right img {
+    max-width: 600px;
+  }
 }
 
 .tb-product-additional__information {

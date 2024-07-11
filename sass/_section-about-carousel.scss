@@ -54,7 +54,7 @@
             }
             &-button {
                 &-prev {
-                    left: 0;
+                    left: 10px;
                 }
                 &-next{
                     @media (width <= $iP){
@@ -124,6 +124,11 @@
         &-left {
             width: 426px;
             padding-left: 60px;
+			@media only screen and (min-width: $md ){
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
 
             @media (width <=$iP) {
                 width: 100%;
@@ -166,6 +171,9 @@
             img {
                 position: relative;
                 z-index: 2;
+				@media only screen and (min-width: $md){
+					max-width: 600px;
+				}
             }
         }
     }
