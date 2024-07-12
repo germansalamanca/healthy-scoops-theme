@@ -1,27 +1,27 @@
 @font-face {
-  font-family: "Visby Cf";
+  font-family: "Visby CF";
   font-weight: normal;
-  src: url("VisbyCF-Regular.woff2") format("woff2");
+  src: url("VisbyCF-Regular.otf") format("opentype");
   font-display: swap;
 }
 @font-face {
-  font-family: "Visby Cf";
+  font-family: "Visby CF";
   font-weight: normal;
   font-style: italic;
-  src: url("VisbyCF-RegularOblique.woff2") format("woff2");
+  src: url("VisbyCF-RegularOblique.otf") format("opentype");
   font-display: swap;
 }
 @font-face {
-  font-family: "Visby Cf";
+  font-family: "Visby CF";
   font-weight: bold;
-  src: url("VisbyCF-Bold.woff2") format("woff2");
+  src: url("VisbyCF-Bold.otf") format("opentype");
   font-display: swap;
 }
 @font-face {
-  font-family: "Visby Cf";
+  font-family: "Visby CF";
   font-weight: bold;
   font-style: italic;
-  src: url("VisbyCF-BoldOblique.woff2") format("woff2");
+  src: url("VisbyCF-BoldOblique.otf") format("opentype");
   font-display: swap;
 }
 .tb-container {
@@ -84,6 +84,7 @@ img {
 
 .tb-title {
   font-family: "Visby CF", Helvetica, sans-serif;
+  color: red;
 }
 
 .tb-preTitle {
@@ -298,7 +299,7 @@ section.tb-featuredCats .tb-circle-logo {
 }
 section.tb-featuredCats h2, section.tb-featuredCats h3 {
   text-align: center;
-  color: var(--tb-textColor);
+  color: #293820;
   font-family: "Visby CF", Helvetica, sans-serif;
 }
 section.tb-featuredCats h2 {

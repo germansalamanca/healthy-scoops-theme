@@ -2,31 +2,31 @@
  
 // Regular
 @font-face{
-	font-family: 'Visby Cf';
+	font-family: 'Visby CF';
 	font-weight: normal;
-	src: url('VisbyCF-Regular.woff2') format("woff2");
+	src: url('VisbyCF-Regular.otf') format("opentype");
 	font-display: swap;
 }
 // Regular Italic
 @font-face{
-	font-family: 'Visby Cf';
+	font-family: 'Visby CF';
 	font-weight: normal;
 	font-style: italic;
-	src: url('VisbyCF-RegularOblique.woff2') format("woff2");
+	src: url('VisbyCF-RegularOblique.otf') format("opentype");
 	font-display: swap;
 }
 // Bold
 @font-face{
-	font-family: 'Visby Cf';
+	font-family: 'Visby CF';
 	font-weight: bold;
-	src: url('VisbyCF-Bold.woff2') format("woff2");
+	src: url('VisbyCF-Bold.otf') format("opentype");
 	font-display: swap;
 }
 // Bold Italic
 @font-face{
-	font-family: 'Visby Cf';
+	font-family: 'Visby CF';
 	font-weight: bold;
 	font-style: italic;
-	src: url('VisbyCF-BoldOblique.woff2') format("woff2");
+	src: url('VisbyCF-BoldOblique.otf') format("opentype");
 	font-display: swap;
 }
