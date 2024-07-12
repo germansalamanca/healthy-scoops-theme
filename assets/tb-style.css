@@ -1757,10 +1757,11 @@ body .tb-about-hero .tb-decorative.right {
     top: 6px;
   }
 }
-#header #AccessibleNav {
+.mobile-nav-container {
   position: relative;
-  top: 8px;
+  top: 6px;
 }
+
 #header .shipping-text {
   position: relative;
   top: 8px;
