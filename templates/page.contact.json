@@ -47,7 +47,7 @@
         "contact_module_address2": "Baltimore, MD, USA 1234",
         "contact_module_email1": "info@example.com",
         "contact_phone1": "Toll-Free:  0000 - 123 - 456789",
-        "contact_module_address_two": true,
+        "contact_module_address_two": false,
         "contact_module_address_two_title": "Regional Office - USA",
         "contact_module_address3": "No: 58 A, East Madison Street,",
         "contact_module_address4": "Baltimore, MD, USA 1235",
