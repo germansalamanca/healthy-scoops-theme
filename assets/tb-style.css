@@ -1752,11 +1752,6 @@ body .tb-about-hero .tb-decorative.right {
   top: 184px !important;
 }
 
-@media only screen and (min-width: 768px) {
-  ul.dt-nav {
-    top: 2px !important;
-  }
-}
 #header #AccessibleNav {
   position: relative;
   top: px;
