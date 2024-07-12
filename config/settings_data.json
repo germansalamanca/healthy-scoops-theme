@@ -401,6 +401,7 @@
           "enable_custom_text": true,
           "custom_text": "Whatsapp: 786 495 4707",
           "custom_link": "https:\/\/api.whatsapp.com\/send?phone=%2B17864954707&text=Hola%21+Quisiera+tener+m%C3%A1s+informaci%C3%B3n+de+tus+servicios+%F0%9F%92%9A",
+          "custom_text_icon": "shopify:\/\/shop_images\/Brownrice.jpg",
           "show_header_currency": false,
           "enable_sale": false,
           "sale_txt": "Sale",
