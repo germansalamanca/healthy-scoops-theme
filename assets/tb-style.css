@@ -1779,6 +1779,9 @@ body .tb-about-hero .tb-decorative.right {
   border: 1px solid #ededed;
 }
 
+.site-footer {
+  border-top: 1px solid #ffffff;
+}
 .site-footer .footer__title {
   font-size: 20px;
   margin-bottom: 0.3rem !important;
