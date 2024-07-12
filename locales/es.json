@@ -1,0 +1,136 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin language editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "customer": {
+    "addresses": {
+      "cancel": "Cancelar",
+      "edit": "Editar",
+      "delete": "Borrar",
+      "delete_confirm": "¿Está seguro de que desea eliminar esta dirección?"
+    },
+    "login": {
+      "title": "Acceso",
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "forgot_password": "¿Olvidaste tu contraseña?",
+      "sign_in": "Iniciar sesión",
+      "cancel": "Volver a la tienda",
+      "guest_title": "Continuar como invitado",
+      "guest_continue": "Continuar"
+    },
+    "orders": {
+      "title": "Historial de pedidos",
+      "order_number": "Orden",
+      "date": "Fecha",
+      "payment_status": "Estado de pago",
+      "fulfillment_status": "Estado de cumplimiento",
+      "none": "Aún no has realizado ningún pedido."
+    },
+    "order": {
+      "title": "Orden {{ name }}",
+      "date": "Colocado el {{ date }}",
+      "cancelled": "Pedido cancelado el {{ date }}",
+      "cancelled_reason": "Razón: {{ reason }}",
+      "billing_address": "Dirección de Envio",
+      "payment_status": "Estado de pago",
+      "shipping_address": "Dirección de envío",
+      "fulfillment_status": "Estado de cumplimiento",
+      "discount": "Descuento",
+      "shipping": "Envío",
+      "tax": "Impuesto",
+      "product": "Producto",
+      "price": "Precio",
+      "quantity": "Cantidad",
+      "fulfilled_at": "Cumplido {{ date }}",
+      "subtotal": "Total parcial"
+    },
+    "recover_password": {
+      "title": "Restablecer su contraseña",
+      "email": "Correo electrónico",
+      "submit": "Entregar",
+      "cancel": "Cancelar",
+      "subtext": "Le enviaremos un correo electrónico para restablecer su contraseña.",
+      "success": "Le hemos enviado un correo electrónico con un enlace para actualizar su contraseña."
+    },
+    "reset_password": {
+      "title": "Restablecer la contraseña de la cuenta",
+      "subtext": "Ingrese una nueva contraseña para {{ email }}",
+      "password": "Contraseña",
+      "password_confirm": "confirmar Contraseña",
+      "submit": "Restablecer la contraseña"
+    },
+    "register": {
+      "create_account": "Registro",
+      "title": "Crear una cuenta",
+      "first_name": "Nombre de pila",
+      "last_name": "Apellido",
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "submit": "Crear",
+      "cancel": "Volver a la tienda"
+    }
+  },
+  "home_page": {
+    "onboarding": {
+      "modal_title": "Casi llegamos...",
+      "no_products_html": "No tienes productos en tu colección de Frontpage. Este marcador de posición aparecerá hasta que <a href=\"\/admin\/collections?tutorial=Frontpage\">agregue un producto a esta colección<\/a> .",
+      "no_products_collection": "Aún no hay productos, pero una vez que comiences a agregarlos, aparecerán aquí independientemente de si están en una colección.",
+      "add_product": "Añadir un producto",
+      "product_title": "Título de producto de ejemplo",
+      "no_collections_html": "No tienes ninguna colección para mostrar aquí. <a href=\"\/admin\/custom_collections\">Agregue algunas colecciones<\/a> para acompañar la página principal predeterminada.",
+      "add_collection": "Agregar una colección",
+      "collection_title": "Título de colección de ejemplo",
+      "no_content": "Aún no has colocado ningún contenido."
+    }
+  },
+  "layout": {
+    "navigation": {
+      "menu": "Menú",
+      "all_categories": "todas las categorias"
+    },
+    "cart": {
+      "title": "Carro"
+    },
+    "customer": {
+      "account": "Mi cuenta",
+      "log_out": "Cerrar sesión",
+      "log_in": "Iniciar sesión",
+      "or": "o",
+      "create_account": "Registro",
+      "from": "de"
+    },
+    "footer": {
+      "twitter": "Gorjeo",
+      "tumblr": "tumblr",
+      "fancy": "Elegante",
+      "linkedin": "LinkedIn"
+    }
+  },
+  "products": {
+    "general": {
+      "save_html": "Ahorrar<br> {{ saved_amount }}",
+      "collection_return": "Volver a {{ collection }}",
+      "sale_price": "Precio de venta",
+      "regular_price": "Precio regular",
+      "include_taxes": "Impuesto incluido.",
+      "shipping_policy_html": "<a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;\/span&gt;\">Envío<\/a> calculado al finalizar la compra.",
+      "unit_price": "Precio unitario"
+    },
+    "product": {
+      "sold_out": "Agotado",
+      "sold_out_html": "Vendido<br> Afuera",
+      "unavailable": "Indisponible",
+      "instock": "En stock",
+      "available": "Disponible",
+      "new": "Nuevo",
+      "size_chart": "Carta del tamaño"
+    }
+  }
+}
