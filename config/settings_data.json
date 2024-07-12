@@ -399,7 +399,7 @@
           "font_size": 16,
           "font_size_sub": 16,
           "enable_custom_text": true,
-          "custom_text": "(+1) 786 495 4707",
+          "custom_text": "Whatsapp: 786 495 4707",
           "custom_link": "https:\/\/api.whatsapp.com\/send?phone=%2B17864954707&text=Hola%21+Quisiera+tener+m%C3%A1s+informaci%C3%B3n+de+tus+servicios+%F0%9F%92%9A",
           "show_header_currency": false,
           "enable_sale": false,
