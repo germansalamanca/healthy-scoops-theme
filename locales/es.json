@@ -13,7 +13,24 @@
       "cancel": "Cancelar",
       "edit": "Editar",
       "delete": "Borrar",
-      "delete_confirm": "¿Está seguro de que desea eliminar esta dirección?"
+      "delete_confirm": "¿Está seguro de que desea eliminar esta dirección?",
+      "title": "Tus direcciones",
+      "default": "Por defecto",
+      "add_new": "Añadir una nueva dirección",
+      "edit_address": "Editar dirección",
+      "first_name": "Nombre de pila",
+      "last_name": "Apellido",
+      "company": "Compañía",
+      "address1": "Dirección 1",
+      "address2": "Dirección 2",
+      "city": "Ciudad",
+      "country": "País",
+      "province": "Provincia",
+      "zip": "Código postal",
+      "phone": "Teléfono",
+      "set_default": "Establecer como dirección predeterminada",
+      "add": "Añadir dirección",
+      "update": "Actualizar dirección"
     },
     "login": {
       "title": "Acceso",
@@ -75,6 +92,20 @@
       "password": "Contraseña",
       "submit": "Crear",
       "cancel": "Volver a la tienda"
+    },
+    "account": {
+      "title": "Mi cuenta",
+      "details": "detalles de la cuenta",
+      "view_addresses": "Ver direcciones",
+      "return": "Volver a los detalles de la cuenta"
+    },
+    "activate_account": {
+      "title": "Activar la cuenta",
+      "subtext": "Crea tu contraseña para activar tu cuenta.",
+      "password": "Contraseña",
+      "password_confirm": "confirmar Contraseña",
+      "submit": "Activar la cuenta",
+      "cancel": "Rechazar invitación"
     }
   },
   "home_page": {
@@ -348,7 +379,45 @@
       "savings_html": "Estás ahorrando: {{ price }}",
       "shipping_at_checkout": "El envío, los impuestos y los descuentos se calcularán al finalizar la compra.",
       "update": "Actualización de la compra",
-      "checkout": "Verificar"
+      "checkout": "Verificar",
+      "view_cart": "Ver carrito",
+      "empty": "No hay artículos en el carrito",
+      "add_items": "Añade los artículos que quieras comprar",
+      "start_shop": "Empieza a comprar",
+      "continue_shopping": "Seguir comprando",
+      "added_to_cart": "Producto agregado exitosamente a su carrito de compras",
+      "item": "Artículo",
+      "items": "Elementos",
+      "qty": "Cantidad",
+      "cart_tip": "Hay",
+      "items_in_cart": "objetos en tu carro de compras",
+      "shipping_calculator_button": "Calcular costo de envío",
+      "shipping_calculator_calculating": "Calculador...",
+      "shipping_calculator_error_message": "Error: ingrese la información de envío correcta",
+      "shipping_calculator_success_many_rates": {
+        "there_are": "Hay",
+        "shipping_rates_available_for": "tarifas de envío disponibles para",
+        "starting_at": ", a partir de"
+      },
+      "items_count": {
+        "one": "artículo",
+        "other": "elementos"
+      },
+      "shipping_calculator_success_one_rate": "Hay una tarifa de envío disponible para",
+      "shipping_calculator_success_no_rate": "No hay tarifa de envío disponible para este pedido y destino.",
+      "shipping_calculator_success_at": "en",
+      "tax": "Impuesto",
+      "at_checkout": "Verificar",
+      "shipping": "Envío",
+      "discounts": "Descuento"
+    },
+    "label": {
+      "product": "nombre del producto",
+      "products": "Productos",
+      "price": "Precio",
+      "quantity": "Cantidad",
+      "remove": "Eliminar",
+      "add_note": "Añade una nota a tu pedido"
     }
   },
   "gift_cards": {
@@ -394,6 +463,60 @@
       "by_both": "Ambos",
       "message_heading": "Modo de comunicación que preparas",
       "message": "Mensaje"
+    }
+  },
+  "collections": {
+    "general": {
+      "title": "Colecciones",
+      "no_matches": "Lo sentimos, no hay productos en esta colección.",
+      "link_title": "Explore nuestra colección {{ title }}",
+      "items_perpage": "Artículos en la página",
+      "grid_view": "Vista en cuadrícula",
+      "list_view": "Vista de la lista",
+      "displayed_as": "Mostrado como",
+      "load_more": "Mostrar más",
+      "no_more": "No más producto",
+      "clear_all": "Limpiar todo"
+    },
+    "toolbar": {
+      "view_as": "Vista",
+      "show": "Espectáculo",
+      "showing": "Demostración",
+      "all": "Todo",
+      "of": "de",
+      "previous": "Anterior",
+      "next": "Próximo",
+      "item_per_page": "Artículos por página",
+      "filter": "Refinar por"
+    },
+    "sorting": {
+      "title": "Ordenar por",
+      "browse": "Navegar por",
+      "all_tags": "Todo",
+      "featured": "Presentado",
+      "best_selling": "Más vendido",
+      "az": " Arizona",
+      "za": "ZA",
+      "price_ascending": "Precios de barato a caro",
+      "price_descending": "Precio, de mayor a menor",
+      "date_descending": "Fecha, nueva a vieja",
+      "date_ascending": "Fecha, antigua a nueva"
+    },
+    "items": {
+      "paginate_by": "Paginar por"
+    }
+  },
+  "contact": {
+    "form": {
+      "name": "Nombre",
+      "email": "Correo electrónico",
+      "phone": "Teléfono",
+      "sub": "Sujeto",
+      "message": "Mensaje",
+      "send": "Enviar mensaje",
+      "post_success": "Gracias por contactarnos. Nos comunicaremos con usted lo antes posible.",
+      "social_icons_title": "Síganos",
+      "send_question": "Enviar pregunta"
     }
   }
 }
