@@ -1,92 +1,151 @@
-		<!-- Starts FAQ -->
-		 <section class="tb-faq">
-			<div class="tb-container tb-container-title tb-pos-r">
-				<h2 class="tb-section-title">FAQ</h2>
-			</div>
-			<div class="tb-container tb-cols tb-pos-r">
-				<div class="tb-decorative left wow fadeInLeft"></div>
-				<div class="tb-decorative right wow fadeInUp"></div>
-				<div class="tb-col tb-col-left tb-pos-r">
-					<div class="tb-accordion">
-						<header>Our Values</header>
-						<div class="tb-content">
-							<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
-						</div>
-					</div>
-					<div class="tb-accordion">
-						<header>Our Philosophy</header>
-						<div class="tb-content">
-							<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
-						</div>
-					</div>
-					<div class="tb-accordion">
-						<header>Our Mission</header>
-						<div class="tb-content">
-							<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
-						</div>
-					</div>
-					<div class="tb-accordion">
-						<header>Our Goals</header>
-						<div class="tb-content">
-							<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
-						</div>
-					</div>
-				</div>
-				<div class="tb-col tb-col-right tb-pos-r">
-					<div class="tb-accordion">
-						<header>Our Values</header>
-						<div class="tb-content">
-							<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
-						</div>
-					</div>
-					<div class="tb-accordion">
-						<header>Our Philosophy</header>
-						<div class="tb-content">
-							<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie.</p>
-						</div>
-					</div>
-					<div class="tb-accordion">
-						<header>Our Mission</header>
-						<div class="tb-content">
-							<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
-						</div>
-					</div>
-					<div class="tb-accordion">
-						<header>Our Goals</header>
-						<div class="tb-content">
-							<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		 </section>
-		 <script>
-			const accordions = document.querySelectorAll('.tb-accordion')
-			accordions.forEach(accordion => {
-				const header = accordion.querySelector('header')
-				header.addEventListener('click', ()=>{
-					const panel = accordion.querySelector('.tb-content')
-					accordion.classList.toggle('active')
-					if (panel.style.maxHeight) {
-						panel.style.maxHeight = null;
-					} else {
-						panel.style.maxHeight = panel.scrollHeight + "px";
-					}
-				})
-			});
-		 </script>
-		<!-- Ends FAQ --> 
+<!-- Starts FAQ -->
+<section class="tb-faq">
+  <div class="tb-container tb-container-title tb-pos-r">
+    <h2 class="tb-section-title">FAQ</h2>
+  </div>
+  <div class="tb-container tb-cols tb-pos-r">
+    <div class="tb-decorative left wow fadeInLeft"></div>
+    <div class="tb-decorative right wow fadeInUp"></div>
+    <div class="tb-col tb-col-left tb-pos-r">
+      <div class="tb-accordion">
+        <header>How does our service work?</header>
+        <div class="tb-content">
+          <p>
+            You choose your favorite frozen meals on our website. We prepare and deliver them directly to your door. You
+            just need to heat them according to the instructions to enjoy a delicious and healthy meal.
+          </p>
+        </div>
+      </div>
+      <div class="tb-accordion">
+        <header>How many servings do our proteins provide?</header>
+        <div class="tb-content">
+          <p>
+            Most of our meals are designed to provide two or three servings, is going to depend on your portion
+            preferences.
+          </p>
+        </div>
+      </div>
+      <div class="tb-accordion">
+        <header>What days do we deliver?</header>
+        <div class="tb-content">
+          <p>
+            We deliver on Monday, Wednesday and Friday. To ensure timely delivery, please place your order one full day
+            in advance. If you would like to have meals delivered on Monday, place your order by Sunday morning.
+          </p>
+        </div>
+      </div>
+      <div class="tb-accordion">
+        <header>Do we deliver to the suburbs?</header>
+        <div class="tb-content">
+          <p>
+            The delivery cost varies depending on the location and size of the order. Contact us for detailed
+            information about shipping costs.
+          </p>
+        </div>
+      </div>
+      <div class="tb-accordion">
+        <header>What is the delivery cost?</header>
+        <div class="tb-content">
+          <p>
+            The delivery cost varies depending on the location and size of the order. Contact us for detailed
+            information about shipping costs.
+          </p>
+        </div>
+      </div>
+      <div class="tb-accordion">
+        <header>Are the meals precooked and only need to be heated?</header>
+        <div class="tb-content">
+          <p>
+            Yes, all our meals are precooked and only need to be reheated following the instructions on the packaging.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="tb-col tb-col-right tb-pos-r">
+      <div class="tb-accordion">
+        <header>How long can the meals last in the refrigerator?</header>
+        <div class="tb-content">
+          <p>
+            Our frozen meals are designed to be stored in the freezer for up to six months. Once thawed, they can be
+            kept in the refrigerator for up to five days before being consumed.
+          </p>
+        </div>
+      </div>
+      <div class="tb-accordion">
+        <header>What are the main ingredients in our meals?</header>
+        <div class="tb-content">
+          <p>
+            We use fresh and natural ingredients, without additives or preservatives, to offer you healthy and delicious
+            meals with authentic Latin flavors.
+          </p>
+        </div>
+      </div>
+      <div class="tb-accordion">
+        <header>Are our meals suitable for special diets (gluten-free, vegetarian, etc.)?</header>
+        <div class="tb-content">
+          <p>
+            Yes, we offer options for various dietary needs, including gluten-free, vegetarian, and vegan options. Check
+            the labels of each product for more details.
+          </p>
+        </div>
+      </div>
+      <div class="tb-accordion">
+        <header>How can I place an order?</header>
+        <div class="tb-content">
+          <p>
+            You can easily place an order on our website. Simply select your favorite meals -Select your scoops-, add
+            them to your cart -Scoops Selection-, and follow the checkout process.
+          </p>
+        </div>
+      </div>
+      <div class="tb-accordion">
+        <header>Do you offer meal subscriptions?</header>
+        <div class="tb-content">
+          <p>
+            Yes, we offer subscription plans so you can receive your favorite meals regularly without having to place
+            repeated orders. Visit our subscription page for more information.
+          </p>
+        </div>
+      </div>
+      <div class="tb-accordion">
+        <header>What should I do if I have a problem with my order?</header>
+        <div class="tb-content">
+          <p>
+            If you have any issues with your order, contact our customer service through info@healthyscoops.us, We are
+            here to help and ensure you are satisfied with your purchase.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  const accordions = document.querySelectorAll('.tb-accordion');
+  accordions.forEach((accordion) => {
+    const header = accordion.querySelector('header');
+    header.addEventListener('click', () => {
+      const panel = accordion.querySelector('.tb-content');
+      accordion.classList.toggle('active');
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+      }
+    });
+  });
+</script>
+<!-- Ends FAQ -->
 
 {% schema %}
 {
   "name": "Home Sections Bottom",
   "settings": [],
   "presets": [
-{
-  "name": "Home Sections Bottom",
-  "category": "ADVANCED LAYOUT"
-}
-]
+    {
+      "name": "Home Sections Bottom",
+      "category": "ADVANCED LAYOUT"
+    }
+  ]
 }
 {% endschema %}
 {% stylesheet %}
