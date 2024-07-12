@@ -1435,6 +1435,7 @@ body .tb-about-hero .tb-decorative.right {
 .tb-about-history .tb-container .tb-col-left img {
   position: relative;
   z-index: 2;
+  max-width: 600px;
 }
 .tb-about-history .tb-container .tb-col-right {
   width: 325px;
@@ -1446,11 +1447,19 @@ body .tb-about-hero .tb-decorative.right {
 }
 .tb-about-history .tb-container .tb-col-right h2 {
   color: #293820;
-  font-size: 3.2rem !important;
+  font-size: 2.6rem !important;
+  margin-bottom: 1rem !important;
+  line-height: 1.1;
+}
+.tb-about-history .tb-container .tb-col-right h3 {
+  color: #293820;
+  font-size: 2.4rem;
+  font-weight: normal;
+  margin: 0 0 1rem !important;
+  line-height: 1.2;
 }
 .tb-about-history .tb-container .tb-col-right p {
   font-size: 1.125rem;
-  padding-left: 1.75rem;
   color: white;
   font-style: italic;
   line-height: 30px;
