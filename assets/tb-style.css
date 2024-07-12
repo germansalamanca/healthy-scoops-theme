@@ -198,6 +198,34 @@ img {
     transform: translateY(0);
   }
 }
+.tb-latinaWomen {
+  margin-top: 3.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.8rem;
+}
+.tb-latinaWomen img {
+  flex-shrink: 0;
+}
+.tb-latinaWomen span {
+  color: #D51464;
+  font-size: 40px;
+  font-family: "Visby CF", Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.tb-latina-wrapper {
+  background-color: #EFECE1;
+}
+.tb-latina-wrapper .tb-latinaWomen {
+  margin: 0;
+}
+.tb-latina-wrapper .tb-latinaWomen span {
+  font-size: 27px;
+}
+
 .tb-videoCover {
   position: relative;
   background-color: #343b3f;
