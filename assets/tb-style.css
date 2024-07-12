@@ -390,6 +390,10 @@ section.tb-differentiators .tb-container {
 section.tb-differentiators h2 {
   position: relative;
   z-index: 4;
+  margin-bottom: 0.2rem;
+}
+section.tb-differentiators h3 {
+  font-size: 2.5rem;
   margin-bottom: 3rem;
 }
 section.tb-differentiators .tb-description {
@@ -675,6 +679,9 @@ section.tb-ourHistory .tb-container {
 }
 section.tb-ourHistory .tb-col-left {
   animation-delay: 0.3s;
+}
+section.tb-ourHistory .tb-col-left .tb-section-title {
+  font-size: 2.5rem !important;
 }
 @media only screen and (min-width: 768px) {
   section.tb-ourHistory .tb-col-left {
@@ -1434,7 +1441,7 @@ body .tb-about-hero .tb-decorative.right {
 }
 .tb-about-history .tb-container .tb-col-right h2 {
   color: #293820;
-  font-size: 3.125rem;
+  font-size: 3.2rem !important;
 }
 .tb-about-history .tb-container .tb-col-right p {
   font-size: 1.125rem;
