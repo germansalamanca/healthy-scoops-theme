@@ -102,11 +102,16 @@
 					}
 			}
     }
+	.tb-subtitle{
+		font-size: 2rem;
+		color: $green-dark;
+	}
 
     h2 {
         font-size: 3.1rem;
-        margin: 0 0 2.65rem;
+        margin: 0 0 .4rem;
         font-weight: bold;
+		color: $green-dark;
     }
 
     .tb-col {

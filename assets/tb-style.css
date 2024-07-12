@@ -1233,10 +1233,15 @@ body .tb-about-hero .tb-decorative.right {
   border: 1px solid #6DA63B;
   position: relative;
 }
+.tb-about-selling .tb-subtitle {
+  font-size: 2rem;
+  color: #293820;
+}
 .tb-about-selling h2 {
   font-size: 3.1rem;
-  margin: 0 0 2.65rem;
+  margin: 0 0 0.4rem;
   font-weight: bold;
+  color: #293820;
 }
 .tb-about-selling .tb-col-left {
   width: 570px;
