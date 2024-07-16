@@ -348,7 +348,7 @@
           "use_sticky_header": false,
           "use_sticky_mobile": false,
           "transparent_header": false,
-          "show_announcement": false,
+          "show_announcement": true,
           "hide_announcement_mobile": false,
           "home_page_only": false,
           "bg_color": "#f9b827",
