@@ -12,7 +12,7 @@
     "main": {
       "type": "contact",
       "settings": {
-        "full": false,
+        "full": true,
         "spacing_both_ends": false,
         "padding": "0,60",
         "margin": "0,0",
