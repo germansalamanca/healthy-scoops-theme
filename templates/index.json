@@ -133,6 +133,7 @@
         },
         "content_axa77z": {
           "type": "content",
+          "disabled": true,
           "settings": {
             "quote": "<p>Amo con locura, me salvan la vida siempre.<\/p>",
             "author": "Andreina Tavara",
@@ -143,6 +144,7 @@
         },
         "content_bkdY3X": {
           "type": "content",
+          "disabled": true,
           "settings": {
             "quote": "<p>Una muy buena opción para la vida práctica.<\/p>",
             "author": "María Virginia Rodríguez",
