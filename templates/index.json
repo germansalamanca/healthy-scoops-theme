@@ -124,34 +124,31 @@
         "71c4c88d-5c1a-4efe-9970-f1923aaf162d": {
           "type": "content",
           "settings": {
-            "quote": "<p>Marques at urna condimentum mattis pellentesque id nibh. Dolor purus non enim praesent elementum facilisis. <\/p>",
-            "icon": "shopify:\/\/shop_images\/eggy-breakfast.jpg",
-            "author": "Lisha",
-            "job": "Home Maker",
+            "quote": "<p>I already finished the shredded chicken, it’s amazing.<\/p>",
+            "author": "Madelynn Skye",
+            "job": "",
             "star": "5",
             "content_bg_color": "#f2f7ff"
           }
         },
-        "165208986360689f6c-0": {
+        "content_axa77z": {
           "type": "content",
           "settings": {
-            "quote": "<p>Serdeses at urna condimentum mattis pellentesque id nibh. Dolor purus non enim praesent elementum facilisis. Sed risus ultricies tristique nulla aliquet.<\/p>",
-            "icon": "shopify:\/\/shop_images\/foto-ave.jpg",
-            "author": "Jenifer Thomas",
-            "job": "Lawer",
-            "star": "4",
-            "content_bg_color": "#f2f7ff"
+            "quote": "<p>Amo con locura, me salvan la vida siempre.<\/p>",
+            "author": "Andreina Tavara",
+            "job": "",
+            "star": "5",
+            "content_bg_color": ""
           }
         },
-        "18ec5966-cf98-445b-90f9-81e1cb74127b": {
+        "content_bkdY3X": {
           "type": "content",
           "settings": {
-            "quote": "<p>Dolor purus non enim praesent elementum facilisis. Sed risus ultricies tristique nulla aliquet.<\/p>",
-            "icon": "shopify:\/\/shop_images\/florida-orange-orchard-branches-heavy-with-juicy-fruit.jpg",
-            "author": "Linda",
-            "job": "Graphic Designer",
-            "star": "3",
-            "content_bg_color": "#f2f7ff"
+            "quote": "<p>Una muy buena opción para la vida práctica.<\/p>",
+            "author": "María Virginia Rodríguez",
+            "job": "",
+            "star": "5",
+            "content_bg_color": ""
           }
         }
       },
@@ -159,8 +156,8 @@
         "fcc11664-db70-4d98-902d-c52fd15ac32a",
         "content_PJxeiJ",
         "71c4c88d-5c1a-4efe-9970-f1923aaf162d",
-        "165208986360689f6c-0",
-        "18ec5966-cf98-445b-90f9-81e1cb74127b"
+        "content_axa77z",
+        "content_bkdY3X"
       ],
       "settings": {
         "full": true,
