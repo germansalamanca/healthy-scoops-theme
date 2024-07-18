@@ -1,1 +1,80 @@
-{"sections":{"main":{"type":"main-collection-template","blocks":{"13774c76-41f2-4be4-9f86-d042e71f8e06":{"type":"menu","settings":{"filter_title":"Category","linklist":"category-menu"}},"c46d821f-34df-4d7e-afed-7f3cfe4f37c4":{"type":"collection_filter","disabled":true,"settings":{}},"b8b9fac8-f331-4738-a7e9-29aa5671dffe":{"type":"carousel","disabled":true,"settings":{"title":"Fresh Products","collection":"nuts","limit":5}},"deafb672-1c6e-4f02-aab7-bf3b8aca7d6c":{"type":"image","disabled":true,"settings":{"title":"Todays Deal","link_text":"","link":""}},"6dd06fa6-e8b5-4641-94ca-22360b181146":{"type":"collection","settings":{"title":"Best Sellings","collection":"destacados","limit":4}}},"block_order":["13774c76-41f2-4be4-9f86-d042e71f8e06","c46d821f-34df-4d7e-afed-7f3cfe4f37c4","b8b9fac8-f331-4738-a7e9-29aa5671dffe","deafb672-1c6e-4f02-aab7-bf3b8aca7d6c","6dd06fa6-e8b5-4641-94ca-22360b181146"],"settings":{"full":false,"spacing_both_ends":true,"padding":"0,60","margin":"0,0","show_collection_image":false,"collections_sort_enable":false,"collections_view_enable":true,"collections_custom_cols":false,"show_quantity_selector":true,"grid":"3","rows":"4"}}},"order":["main"]}
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "main-collection-template",
+      "blocks": {
+        "13774c76-41f2-4be4-9f86-d042e71f8e06": {
+          "type": "menu",
+          "settings": {
+            "filter_title": "Category",
+            "linklist": "category-menu"
+          }
+        },
+        "c46d821f-34df-4d7e-afed-7f3cfe4f37c4": {
+          "type": "collection_filter",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "b8b9fac8-f331-4738-a7e9-29aa5671dffe": {
+          "type": "carousel",
+          "disabled": true,
+          "settings": {
+            "title": "Fresh Products",
+            "collection": "nuts",
+            "limit": 5
+          }
+        },
+        "deafb672-1c6e-4f02-aab7-bf3b8aca7d6c": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "title": "Todays Deal",
+            "link_text": "",
+            "link": ""
+          }
+        },
+        "6dd06fa6-e8b5-4641-94ca-22360b181146": {
+          "type": "collection",
+          "settings": {
+            "title": "Best Sellings",
+            "collection": "destacados",
+            "limit": 4
+          }
+        }
+      },
+      "block_order": [
+        "13774c76-41f2-4be4-9f86-d042e71f8e06",
+        "c46d821f-34df-4d7e-afed-7f3cfe4f37c4",
+        "b8b9fac8-f331-4738-a7e9-29aa5671dffe",
+        "deafb672-1c6e-4f02-aab7-bf3b8aca7d6c",
+        "6dd06fa6-e8b5-4641-94ca-22360b181146"
+      ],
+      "settings": {
+        "full": true,
+        "spacing_both_ends": true,
+        "padding": "0,60",
+        "margin": "0,0",
+        "show_collection_image": false,
+        "collections_sort_enable": false,
+        "collections_view_enable": true,
+        "collections_custom_cols": false,
+        "show_quantity_selector": true,
+        "grid": "3",
+        "rows": "4"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
