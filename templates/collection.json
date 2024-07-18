@@ -60,7 +60,7 @@
         "6dd06fa6-e8b5-4641-94ca-22360b181146"
       ],
       "settings": {
-        "full": true,
+        "full": false,
         "spacing_both_ends": true,
         "padding": "0,60",
         "margin": "0,0",
