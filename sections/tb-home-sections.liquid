@@ -67,8 +67,7 @@
       <div class="tb-decorative left wow fadeInLeft"></div>
       <div class="tb-decorative right wow fadeInRight"></div>
 
-      <span class="tb-preTitle wow fadeInDown"
-        > </span>
+      <span class="tb-preTitle wow fadeInDown"> </span>
       <h2 class="tb-section-title wow fadeIn">Our recipes</h2>
       <h2 class="tb-sectionSubtitle wow fadeInUp">A healthy diet made simple</h2>
 
@@ -111,11 +110,7 @@
         <a href="{{ pages['about-us'].url }}" class="tb-btn wow fadeInUp">Learn more</a>
       </div>
       <div class="tb-col tb-col-right tb-pos-r">
-        <img
-          src="https://cdn.shopify.com/s/files/1/0858/1336/2961/t/2/assets/tb-img-our-history.png?v=1721251985"
-          class="tb-picture wow fadeIn"
-          alt="Healthy Scoops"
-        >
+        <img src="{{ 'tb-img-our-history.png' | asset_img_url: 'original' }}" alt="" class="wow fadeIn">
         <div class="tb-decorative right wow fadeInLeft"></div>
       </div>
     </div>
