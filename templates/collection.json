@@ -15,7 +15,7 @@
         "13774c76-41f2-4be4-9f86-d042e71f8e06": {
           "type": "menu",
           "settings": {
-            "filter_title": "Category",
+            "filter_title": "Categories",
             "linklist": "sidebar-category-menu"
           }
         },
