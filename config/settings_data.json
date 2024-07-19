@@ -37,7 +37,7 @@
     "lap_container_width": 1100,
     "tab_container_width": 960,
     "fullwidth_gap": 6,
-    "gutter_width": 40,
+    "gutter_width": 24,
     "overall_border_radius": 6,
     "base_transitions": "all 0.3s linear",
     "primary_color": "#6da63b",
