@@ -231,6 +231,10 @@ img {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+.collection-header .collection-view .change-mode:after {
+  background-color: var(--tb-primary);
+}
+
 #ProductPrice {
   color: var(--tb-primary);
 }

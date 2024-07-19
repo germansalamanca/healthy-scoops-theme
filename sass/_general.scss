@@ -214,6 +214,11 @@ img{
 	}
 }
 
+// Collection page
+.collection-header .collection-view .change-mode:after{
+	background-color: $primary;
+}
+
 // Product card
 #ProductPrice{
 	color: $primary;
