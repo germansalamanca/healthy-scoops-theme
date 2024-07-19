@@ -207,6 +207,7 @@ img{
 	}
 }
 
+// Fix products grid 
 @media (min-width: 1281px) and (max-width: 1540px) {
 	.container .has-sidebar .collection-grid .dT_VProdWrapper .product-collection.dt-sc-column:not(.product-list-style) {
 			grid-template-columns: repeat(3, 1fr);
