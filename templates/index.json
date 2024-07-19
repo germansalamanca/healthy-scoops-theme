@@ -118,7 +118,7 @@
             "author": "Mary West",
             "job": "",
             "star": "5",
-            "content_bg_color": ""
+            "content_bg_color": "#f2f7ff"
           }
         },
         "71c4c88d-5c1a-4efe-9970-f1923aaf162d": {
@@ -133,24 +133,52 @@
         },
         "content_axa77z": {
           "type": "content",
-          "disabled": true,
           "settings": {
             "quote": "<p>Amo con locura, me salvan la vida siempre.<\/p>",
             "author": "Andreina Tavara",
             "job": "",
             "star": "5",
-            "content_bg_color": ""
+            "content_bg_color": "#f2f7ff"
+          }
+        },
+        "content_xRtXDw": {
+          "type": "content",
+          "settings": {
+            "quote": "<p>En serio, a toda mi familia le encantan.Quieren comer arepas para el desayuno, lonche y cena. <\/p>",
+            "author": "Mirella Acá",
+            "job": "",
+            "star": "5",
+            "content_bg_color": "#f2f7ff"
           }
         },
         "content_bkdY3X": {
           "type": "content",
-          "disabled": true,
           "settings": {
-            "quote": "<p>Una muy buena opción para la vida práctica.<\/p>",
-            "author": "María Virginia Rodríguez",
+            "quote": "<p>Ya probé todo hoy! Arepa en el desayuno, pollo en el almuerzo y carne mechada de cena.Todo demasiado rico. Gracias!<\/p>",
+            "author": "Anabella Gabaldon",
             "job": "",
             "star": "5",
-            "content_bg_color": ""
+            "content_bg_color": "#f2f7ff"
+          }
+        },
+        "content_cT8rdt": {
+          "type": "content",
+          "settings": {
+            "quote": "<p>La comida ha estado exquisita, súper saludable. Muchas gracias me ha servido mucho en estos días porque he estado de reposo, muchas bendiciones para ti y tu negocio.<\/p>",
+            "author": "Enelvis Roca",
+            "job": "",
+            "star": "5",
+            "content_bg_color": "#f2f7ff"
+          }
+        },
+        "content_ez9jAK": {
+          "type": "content",
+          "settings": {
+            "quote": "<p>Quería decirte que estoy fascinada con la comida!!! Hoy me hizo un lunes menos complicado!!! Mil gracias!<\/p>",
+            "author": "Angellie Castellanos",
+            "job": "",
+            "star": "5",
+            "content_bg_color": "#f2f7ff"
           }
         }
       },
@@ -159,7 +187,10 @@
         "content_PJxeiJ",
         "71c4c88d-5c1a-4efe-9970-f1923aaf162d",
         "content_axa77z",
-        "content_bkdY3X"
+        "content_xRtXDw",
+        "content_bkdY3X",
+        "content_cT8rdt",
+        "content_ez9jAK"
       ],
       "settings": {
         "full": true,
