@@ -62,7 +62,7 @@
       "settings": {
         "full": false,
         "spacing_both_ends": true,
-        "padding": "0,60",
+        "padding": "0,50",
         "margin": "0,0",
         "show_collection_image": false,
         "collections_sort_enable": false,
