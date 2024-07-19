@@ -231,6 +231,23 @@ img {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+#ProductPrice {
+  color: var(--tb-primary);
+}
+
+.products .box {
+  border-color: var(--tb-primary);
+  border-radius: 6px;
+}
+.products .box li.init {
+  color: #525252;
+  font-weight: normal;
+}
+.products .box li.init:after {
+  border-color: var(--tb-primary);
+  color: var(--tb-primary);
+}
+
 .tb-videoCover {
   position: relative;
   background-color: #343b3f;

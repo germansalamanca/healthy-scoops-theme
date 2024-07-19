@@ -213,3 +213,22 @@ img{
 			grid-template-columns: repeat(3, 1fr);
 	}
 }
+
+// Product card
+#ProductPrice{
+	color: $primary;
+}
+.products{
+	.box{
+		border-color: $primary;
+		border-radius: 6px;
+		li.init{
+			color: #525252;
+			font-weight: normal;
+			&:after{
+				border-color: $primary;
+				color: $primary;
+			}
+		}
+	}
+}
