@@ -142,7 +142,7 @@
     "display_item_size": true,
     "product_review": false,
     "enable_category_menu": true,
-    "sidebar_width": 400,
+    "sidebar_width": 315,
     "product_gap": 50,
     "product_page_sidebar": "full-width",
     "collection_sidebar_use": "left-sidebar",
