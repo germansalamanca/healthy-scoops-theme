@@ -34,7 +34,7 @@ section.tb-differentiators{
 		&.left{
 			width: 160px;
 			height: 230px;
-			background-image: url(#{$img-url}tb-diff-bg-left.png);
+			background-image: url(#{$img-url}tb-diff-bg-left2.png);
 			animation-delay: .7s;
 			top: -4%;
 			left: -20%;
@@ -62,7 +62,7 @@ section.tb-differentiators{
 			height: 150px;
 			top: 11%;
 			right: -10%;
-			background-image: url(#{$img-url}tb-diff-bg-right.png);
+			background-image: url(#{$img-url}tb-diff-bg-right2.png);
 			animation-delay: .5s;
 			@media only screen and (min-width: $sm){
 				width: 243px;

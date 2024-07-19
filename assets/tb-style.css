@@ -470,7 +470,7 @@ section.tb-differentiators .tb-decorative {
 section.tb-differentiators .tb-decorative.left {
   width: 160px;
   height: 230px;
-  background-image: url(tb-diff-bg-left.png);
+  background-image: url(tb-diff-bg-left2.png);
   animation-delay: 0.7s;
   top: -4%;
   left: -20%;
@@ -504,7 +504,7 @@ section.tb-differentiators .tb-decorative.right {
   height: 150px;
   top: 11%;
   right: -10%;
-  background-image: url(tb-diff-bg-right.png);
+  background-image: url(tb-diff-bg-right2.png);
   animation-delay: 0.5s;
 }
 @media only screen and (min-width: 576px) {
