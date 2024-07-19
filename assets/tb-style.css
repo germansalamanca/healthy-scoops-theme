@@ -609,9 +609,11 @@ section.tb-recipes .tb-container {
 section.tb-recipes .tb-section-title {
   margin-bottom: 0.2rem;
   animation-delay: 0.2s;
+  color: #293820;
 }
 section.tb-recipes .tb-sectionSubtitle {
   animation-delay: 0.4s;
+  color: #293820;
 }
 section.tb-recipes .tb-grid {
   margin-bottom: 4rem;
@@ -697,7 +699,7 @@ section.tb-recipes .tb-decorative.right {
   margin: 0 0 0.6rem;
 }
 .tb-articleRecipe .tb-title a {
-  color: #181B31;
+  color: #293820;
   text-decoration: none;
   transition: all ease 0.3s;
 }
@@ -706,6 +708,7 @@ section.tb-recipes .tb-decorative.right {
 }
 .tb-articleRecipe .tb-excerpt {
   margin: 0 0 1.4rem;
+  color: #293820;
 }
 .tb-articleRecipe .tb-more {
   color: var(--tb-primary);
@@ -1586,14 +1589,14 @@ body .tb-about-hero .tb-decorative.right {
 .tb-about-mission .tb-container > h3 {
   width: 837px;
   margin: 0 auto;
-  font-size: 3.563rem;
-  line-height: 61.6px;
+  font-size: 2.3rem;
+  line-height: 1.2;
   text-align: center;
   font-weight: 400;
 }
 @media (width <= 1024px) {
   .tb-about-mission .tb-container > h3 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     line-height: 45px;
     width: 100%;
     margin: 15px auto 0;
@@ -1636,7 +1639,7 @@ body .tb-about-hero .tb-decorative.right {
 }
 
 .tb-about-carousel {
-  background-color: #293820;
+  background-color: white;
   padding: 8.438rem 0 5.25rem;
 }
 .tb-about-carousel .swiper {
@@ -1664,7 +1667,7 @@ body .tb-about-hero .tb-decorative.right {
   margin: 0 auto 7.75rem;
   font-size: 30px;
   line-height: 37px;
-  color: white;
+  color: #293820;
   width: 799px;
   font-weight: 400;
   text-align: center;
@@ -1716,7 +1719,7 @@ body .tb-about-hero .tb-decorative.right {
   border-color: #6DA63B;
 }
 .tb-about-carousel .appetizers .swiper-button-prev.swiper-button-disabled:after, .tb-about-carousel .appetizers .swiper-button-next.swiper-button-disabled:after {
-  border-color: white;
+  border-color: #838383;
 }
 .tb-about-carousel .appetizers .swiper-button-prev:hover:after, .tb-about-carousel .appetizers .swiper-button-next:hover:after {
   transform: scale(1.3) rotate(45deg);
@@ -1728,7 +1731,7 @@ body .tb-about-hero .tb-decorative.right {
 .tb-about-carousel .appetizers .swiper-pagination-bullet {
   width: 7px;
   height: 7px;
-  background-color: #D6D6D6;
+  background-color: var(--tb-primary);
   opacity: 1;
   padding: 0;
 }
@@ -1765,13 +1768,13 @@ body .tb-about-hero .tb-decorative.right {
 .tb-about-carousel .tb-col-left h3 {
   font-size: 40px;
   font-weight: bold;
-  color: #FA9522;
+  color: var(--tb-primary);
   margin: 0 0 30px;
 }
 .tb-about-carousel .tb-col-left p {
   font-size: 18px;
   line-height: 28.6px;
-  color: white;
+  color: rgb(50, 50, 50);
   margin: 0 0 44px;
 }
 .tb-about-carousel .tb-col-left h4 {

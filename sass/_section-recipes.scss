@@ -12,10 +12,12 @@ section.tb-recipes{
 	.tb-section-title{
 		margin-bottom: .2rem;
 		animation-delay: .2s;
+		color: $green_dark;
 	}
 
 	.tb-sectionSubtitle{
 		animation-delay: .4s;
+		color: $green_dark;
 	}
 
 	.tb-grid{
@@ -94,7 +96,7 @@ section.tb-recipes{
 		font-weight: bold;
 		margin: 0 0 .6rem;
 		a{
-			color: #181B31;
+			color: $green_dark;;
 			text-decoration: none;
 			transition: $transition;
 			&:hover{
@@ -104,6 +106,7 @@ section.tb-recipes{
 	}
 	.tb-excerpt{
 		margin: 0 0 1.4rem;
+		color: $green_dark;
 	}
 	.tb-more{
 		color: $primary;

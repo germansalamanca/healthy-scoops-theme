@@ -1,7 +1,7 @@
 @use "variables"as *;
 
 .tb-about-carousel {
-    background-color: #293820;
+    background-color: white;
     padding: 8.438rem 0 5.25rem;
 	.swiper{
 		overflow: hidden;
@@ -25,7 +25,7 @@
             margin: 0 auto 7.75rem;
             font-size: 30px;
             line-height: 37px;
-            color: white;
+            color: $green_dark;
             width: 799px;
             font-weight: 400;
             text-align: center;
@@ -78,7 +78,7 @@
                     }
 					&.swiper-button-disabled{
 						&:after{
-							border-color: white;
+							border-color: #838383;
 						}
 					}
 					&:hover{
@@ -96,7 +96,7 @@
                 &-bullet {
                     width: 7px;
                     height: 7px;
-                    background-color: #D6D6D6;
+                    background-color: $primary;
                     opacity: 1;
 					padding: 0;
 
@@ -138,14 +138,14 @@
             h3 {
                 font-size: 40px;
                 font-weight: bold;
-                color: #FA9522;
+                color: $primary;
                 margin: 0 0 30px;
             }
 
             p {
                 font-size: 18px;
                 line-height: 28.6px;
-                color: white;
+                color: rgb(50, 50, 50);
                 margin: 0 0 44px;
             }
 
