@@ -69,7 +69,7 @@
         "collections_view_enable": true,
         "collections_custom_cols": false,
         "show_quantity_selector": true,
-        "grid": "4",
+        "grid": "3",
         "rows": "4"
       }
     }
