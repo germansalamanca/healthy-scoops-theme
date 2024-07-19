@@ -226,6 +226,11 @@ img {
   font-size: 27px;
 }
 
+@media (min-width: 1281px) and (max-width: 1540px) {
+  .container .has-sidebar .collection-grid .dT_VProdWrapper .product-collection.dt-sc-column:not(.product-list-style) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 .tb-videoCover {
   position: relative;
   background-color: #343b3f;
