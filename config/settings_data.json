@@ -147,7 +147,7 @@
     "product_page_sidebar": "full-width",
     "collection_sidebar_use": "left-sidebar",
     "blog_page_sidebar": "right-sidebar",
-    "collection_sidebar_mobile": false,
+    "collection_sidebar_mobile": true,
     "product_sidebar_mobile": false,
     "sidebar_title_bg": "rgba(0,0,0,0)",
     "sidebar_title_border": "#f3eeeb",
