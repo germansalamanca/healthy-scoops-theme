@@ -65,7 +65,7 @@
         "padding": "0,50",
         "margin": "0,0",
         "show_collection_image": false,
-        "collections_sort_enable": true,
+        "collections_sort_enable": false,
         "collections_view_enable": true,
         "collections_custom_cols": false,
         "show_quantity_selector": true,
