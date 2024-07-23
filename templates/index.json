@@ -301,11 +301,6 @@
       ],
       "settings": {
       }
-    },
-    "tb_home_bottom_g3Jaab": {
-      "type": "tb-home-bottom",
-      "settings": {
-      }
     }
   },
   "order": [
@@ -314,7 +309,6 @@
     "tb_home_sections_YVmVQk",
     "1652089863bde098a5",
     "1720235201bd7fd8bc",
-    "17202368247a85b64f",
-    "tb_home_bottom_g3Jaab"
+    "17202368247a85b64f"
   ]
 }
