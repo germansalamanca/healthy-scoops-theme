@@ -204,7 +204,7 @@
         "background_color": "#293820",
         "overlay_transparency": "1",
         "section_heading": "Check what our users are saying",
-        "section_sub_heading": "Testimonial",
+        "section_sub_heading": "Reviews",
         "section_description": "",
         "section_button_text": "",
         "section_button_link": "",
@@ -280,21 +280,6 @@
     },
     "17202368247a85b64f": {
       "type": "apps",
-      "blocks": {
-        "instafeed_app_block_h7c4q4": {
-          "type": "shopify:\/\/apps\/instafeed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
-          "disabled": true,
-          "settings": {
-            "title": "",
-            "title_color": "",
-            "alignment": "center",
-            "html_area": ""
-          }
-        }
-      },
-      "block_order": [
-        "instafeed_app_block_h7c4q4"
-      ],
       "custom_css": [
         "#insta-feed {max-width: 1200px; margin: 0 auto; padding: 1rem;}",
         "#insta-feed h2 {font-size: 44px !important; color: #293820 !important;}"
