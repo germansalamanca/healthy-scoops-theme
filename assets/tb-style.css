@@ -1808,6 +1808,9 @@ body .tb-about-hero .tb-decorative.right {
 #header {
   padding-top: 0 !important;
 }
+#header .logo {
+  margin-top: 0.6rem;
+}
 
 header .dt-sc-header-logo-sec {
   padding-top: 0.3rem 0;
