@@ -1813,12 +1813,12 @@ body .tb-about-hero .tb-decorative.right {
 }
 
 #shopify-section-index-vertical-mega-menu {
-  top: 20px !important;
+  top: 16px !important;
   position: relative !important;
 }
 @media only screen and (min-width: 1400px) {
   #shopify-section-index-vertical-mega-menu {
-    top: 31px !important;
+    top: 27px !important;
   }
 }
 
