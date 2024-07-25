@@ -1908,3 +1908,7 @@ body .tb-about-hero .tb-decorative.right {
   list-style: inherit;
   padding-left: 0.4rem;
 }
+
+.dt-sc-testimonial {
+  border-radius: 8px;
+}
