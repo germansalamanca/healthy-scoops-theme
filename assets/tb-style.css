@@ -1805,6 +1805,10 @@ body .tb-about-hero .tb-decorative.right {
   }
 }
 
+#header {
+  padding-top: 0 !important;
+}
+
 #shopify-section-index-vertical-mega-menu {
   top: 20px !important;
   position: relative !important;
