@@ -2,8 +2,11 @@
 
 // Header
 #shopify-section-index-vertical-mega-menu {
-    top: 224px !important;
+    // top: 224px !important;
     // top: 185px !important;
+    top: 20px !important;
+		position: relative !important;
+		
 }
 @media only screen and (min-width: 768px) {
     ul.dt-nav {
