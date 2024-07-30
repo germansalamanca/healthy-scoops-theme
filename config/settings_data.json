@@ -145,7 +145,7 @@
     "sidebar_width": 300,
     "product_gap": 30,
     "product_page_sidebar": "full-width",
-    "collection_sidebar_use": "left-sidebar",
+    "collection_sidebar_use": "full-width",
     "blog_page_sidebar": "right-sidebar",
     "collection_sidebar_mobile": true,
     "product_sidebar_mobile": false,
