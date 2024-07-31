@@ -60,7 +60,7 @@ img {
 
 .tb-section-title {
   font-family: "Visby CF", Helvetica, sans-serif;
-  font-size: 36px;
+  font-size: 32px;
   line-height: 1.2;
   font-weight: bold;
   text-align: center;
@@ -75,7 +75,7 @@ img {
 
 .tb-sectionSubtitle {
   font-family: "Visby CF", Helvetica, sans-serif;
-  font-size: 36px;
+  font-size: 32px;
   font-weight: normal;
   text-align: center;
   color: #292929;
@@ -452,13 +452,19 @@ section.tb-differentiators {
 section.tb-differentiators .tb-container {
   position: relative;
 }
-section.tb-differentiators h2 {
+section.tb-differentiators h2.tb-section-title {
   position: relative;
   z-index: 4;
-  margin-bottom: 0.2rem;
+  margin-bottom: 1rem;
 }
-section.tb-differentiators h3 {
+section.tb-differentiators h3.tb-sectionSubtitle {
+  font-size: 1.1rem;
   margin-bottom: 3rem;
+}
+@media only screen and (min-width: 768px) {
+  section.tb-differentiators h3.tb-sectionSubtitle {
+    font-size: 54px;
+  }
 }
 section.tb-differentiators .tb-description {
   position: relative;

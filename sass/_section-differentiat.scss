@@ -6,13 +6,17 @@ section.tb-differentiators{
 	.tb-container{
 		position: relative;
 	}
-	h2{
+	h2.tb-section-title{
 		position: relative;
 		z-index: 4;
-		margin-bottom: .2rem;
+		margin-bottom: 1rem;
 	}
-	h3{
+	h3.tb-sectionSubtitle{
+		font-size: 1.1rem;
 		margin-bottom: 3rem;
+		@media only screen and (min-width: $md){
+			font-size: 54px;
+		}
 	}
 	.tb-description{
 		position: relative;
