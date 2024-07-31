@@ -78,6 +78,7 @@ body {
             }
 
             &.tb-about-carrot {
+							display: none;
                 background-image: url(#{$img-url}tb-carrot.svg);
                 left: 8%;
                 top: 45%;
