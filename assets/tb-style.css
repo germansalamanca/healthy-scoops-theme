@@ -1148,7 +1148,6 @@ body .tb-about-hero .tb-decorative.tb-about-seeds {
   }
 }
 body .tb-about-hero .tb-decorative.tb-about-carrot {
-  display: none;
   background-image: url(tb-carrot.svg);
   left: 8%;
   top: 45%;
