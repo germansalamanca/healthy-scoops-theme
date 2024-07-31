@@ -60,17 +60,22 @@ img {
 
 .tb-section-title {
   font-family: "Visby CF", Helvetica, sans-serif;
-  font-size: 50px;
+  font-size: 36px;
   line-height: 1.2;
   font-weight: bold;
   text-align: center;
   color: #292929;
   margin: 0 0 1.8rem;
 }
+@media only screen and (min-width: 768px) {
+  .tb-section-title {
+    font-size: 50px;
+  }
+}
 
 .tb-sectionSubtitle {
   font-family: "Visby CF", Helvetica, sans-serif;
-  font-size: 38x;
+  font-size: 36px;
   font-weight: normal;
   text-align: center;
   color: #292929;
@@ -357,9 +362,15 @@ section.tb-featuredCats h2, section.tb-featuredCats h3 {
   font-family: "Visby CF", Helvetica, sans-serif;
 }
 section.tb-featuredCats h2 {
-  font-size: 57px;
-  margin: 0 0 4rem;
+  font-size: 2rem;
+  margin: 0 0 1rem;
   font-weight: normal;
+}
+@media only screen and (min-width: 768px) {
+  section.tb-featuredCats h2 {
+    margin: 0 0 4rem;
+    font-size: 57px;
+  }
 }
 section.tb-featuredCats h3 {
   margin: 0 0 1rem;
@@ -447,7 +458,6 @@ section.tb-differentiators h2 {
   margin-bottom: 0.2rem;
 }
 section.tb-differentiators h3 {
-  font-size: 2.5rem;
   margin-bottom: 3rem;
 }
 section.tb-differentiators .tb-description {
@@ -738,7 +748,12 @@ section.tb-ourHistory .tb-col-left {
   animation-delay: 0.3s;
 }
 section.tb-ourHistory .tb-col-left .tb-section-title {
-  font-size: 2.5rem !important;
+  font-size: 1.8rem !important;
+}
+@media only screen and (min-width: 768px) {
+  section.tb-ourHistory .tb-col-left .tb-section-title {
+    font-size: 2.5rem !important;
+  }
 }
 @media only screen and (min-width: 768px) {
   section.tb-ourHistory .tb-col-left {

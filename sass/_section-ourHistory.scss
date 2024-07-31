@@ -17,7 +17,10 @@ section.tb-ourHistory{
 	.tb-col-left{
 		animation-delay: .3s;
 		.tb-section-title{
-			font-size: 2.5rem !important;
+			font-size: 1.8rem !important;
+			@media only screen and (min-width: $md){
+				font-size: 2.5rem !important;
+			}
 		}
 		@media only screen and (min-width: $md){
 			width: 50%;
