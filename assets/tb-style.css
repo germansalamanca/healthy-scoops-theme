@@ -1933,3 +1933,7 @@ body .tb-about-hero .tb-decorative.right {
 .dt-sc-testimonial {
   border-radius: 8px;
 }
+
+.shopify-payment-button {
+  display: none !important;
+}
