@@ -355,7 +355,7 @@
           "bg_color": "#f9b827",
           "text_color": "#ffffff",
           "text_hover_color": "#f30e19",
-          "text": "<p>Free Shipping On Order Above $25 <a href=\"\/collections\" target=\"_blank\" title=\"All collections\">Shop now<\/a><\/p>",
+          "text": "<p>Place your order by 11 AM, and we we’ll ship it the next business day.<\/p>",
           "announcement_height": 40,
           "topbar_bg": "#ffffff",
           "disable_topbar": true,
