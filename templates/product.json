@@ -171,7 +171,7 @@
         "show_quantity_selector": true,
         "show_checkout": true,
         "hide_addtocart": false,
-        "show_wishlist": true,
+        "show_wishlist": false,
         "show_share_buttons": false,
         "tab_position": "bottom",
         "tab_style": "tab",
