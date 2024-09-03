@@ -136,7 +136,7 @@
     "product_button_style": "button",
     "icon_alignment": "icon-center",
     "enable_compare": false,
-    "enable_wishlist": true,
+    "enable_wishlist": false,
     "display_color_variant": true,
     "show_mixed_swatch": true,
     "display_item_size": true,
