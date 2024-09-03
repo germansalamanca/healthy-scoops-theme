@@ -1934,6 +1934,6 @@ body .tb-about-hero .tb-decorative.right {
   border-radius: 8px;
 }
 
-.meta-block-right .shopify-payment-button, .meta-block-right #shopify-installments {
+.shopify-payment-button, #shopify-installments, .shopify-installments {
   display: none !important;
 }
