@@ -125,6 +125,8 @@
 }
 
 // Product
-.shopify-payment-button{
-	display: none !important;
+.meta-block-right{
+	.shopify-payment-button, .shopify-installments{
+		display: none !important;
+	}	
 }
