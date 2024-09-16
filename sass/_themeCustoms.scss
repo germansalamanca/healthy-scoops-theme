@@ -134,3 +134,13 @@
 .Mageplaza-MediaItem{
 	background: transparent !important;
 }
+
+.products{
+	.product-container{
+		&:hover{
+			.product-additional img{
+				visibility: visible;
+			}
+		}
+	}
+}
