@@ -1,9 +1,9 @@
 {%- if canonical_url != blank -%}
-<link rel="canonical" href="{{ canonical_url }}">
+  <link rel="canonical" href="{{ canonical_url }}">
 {%- endif -%}
 
 {%- if settings.favicon != blank -%}
-<link rel="shortcut icon" href="{{ settings.favicon | image_url: width: 16 }}" type="image/png" />
+  <link rel="shortcut icon" href="{{ settings.favicon | image_url: width: 64 }}" type="image/png">
 {%- endif -%}
 
 <title>
@@ -14,5 +14,5 @@
 </title>
 
 {% if page_description %}
-<meta name="description" content="{{ page_description | escape }}">
+  <meta name="description" content="{{ page_description | escape }}">
 {% endif %}
