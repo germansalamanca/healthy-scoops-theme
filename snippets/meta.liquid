@@ -2,9 +2,7 @@
   <link rel="canonical" href="{{ canonical_url }}">
 {%- endif -%}
 
-{%- if settings.favicon != blank -%}
-  <link rel="shortcut icon" href="{{ settings.favicon | image_url: width: 64 }}" type="image/png">
-{%- endif -%}
+<link rel="shortcut icon" href="{{ 'favicon-big.png' | asset_url }}" type="image/png">
 
 <title>
   {{ page_title }}
