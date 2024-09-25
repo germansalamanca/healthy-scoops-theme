@@ -34,7 +34,7 @@
         "section_sub_heading": "A healthy diet made simple",
         "section_description": "",
         "section_button_text": "View all",
-        "section_button_link": "shopify:\/\/collections\/all",
+        "section_button_link": "shopify://collections/all",
         "section_heading_color": "#293820",
         "section_sub_heading_color": "#293820",
         "section_description_color": "#293820",
@@ -49,9 +49,9 @@
         "group_border_radius": "",
         "enable_group_box_shadow": false,
         "reverse_column": false,
-        "content_width": "25\/75",
-        "lap_content_width": "35\/65",
-        "tab_content_width": "100\/100",
+        "content_width": "25/75",
+        "lap_content_width": "35/65",
+        "tab_content_width": "100/100",
         "additional_block_background_color": "",
         "additional_block_box_shadow": false,
         "additional_content_padding": "0",
@@ -104,7 +104,7 @@
         "fcc11664-db70-4d98-902d-c52fd15ac32a": {
           "type": "content",
           "settings": {
-            "quote": "<p>Healthy Scoops has been my lifesaver and perfect option on days when I don’t have time to cook. What I like the most is the quality and taste of their dishes. Besides being delicious, I trust that I am eating healthy. I recommend them 100%.<\/p>",
+            "quote": "<p>Healthy Scoops has been my lifesaver and perfect option on days when I don’t have time to cook. What I like the most is the quality and taste of their dishes. Besides being delicious, I trust that I am eating healthy. I recommend them 100%.</p>",
             "author": "Marilyn Valero",
             "job": "",
             "star": "5",
@@ -114,7 +114,7 @@
         "content_PJxeiJ": {
           "type": "content",
           "settings": {
-            "quote": "<p>I absolutely love Healthy Scoops. It's so comforting to order from them and know you’ll get quality food. For those times when you're busy and still want to eat healthy and delicious meals, their arepas are a must. Having them available has been a game changer for me. Also, I love that they keep adding more dishes to their menu! Thank you!<\/p>",
+            "quote": "<p>I absolutely love Healthy Scoops. It's so comforting to order from them and know you’ll get quality food. For those times when you're busy and still want to eat healthy and delicious meals, their arepas are a must. Having them available has been a game changer for me. Also, I love that they keep adding more dishes to their menu! Thank you!</p>",
             "author": "Mary West",
             "job": "",
             "star": "5",
@@ -124,7 +124,7 @@
         "71c4c88d-5c1a-4efe-9970-f1923aaf162d": {
           "type": "content",
           "settings": {
-            "quote": "<p>I already finished the shredded chicken, it’s amazing.<\/p>",
+            "quote": "<p>I already finished the shredded chicken, it’s amazing.</p>",
             "author": "Madelynn Skye",
             "job": "",
             "star": "5",
@@ -134,7 +134,7 @@
         "content_axa77z": {
           "type": "content",
           "settings": {
-            "quote": "<p>Amo con locura, me salvan la vida siempre.<\/p>",
+            "quote": "<p>Amo con locura, me salvan la vida siempre.</p>",
             "author": "Andreina Tavara",
             "job": "",
             "star": "5",
@@ -144,7 +144,7 @@
         "content_xRtXDw": {
           "type": "content",
           "settings": {
-            "quote": "<p>En serio, a toda mi familia le encantan.Quieren comer arepas para el desayuno, lonche y cena. <\/p>",
+            "quote": "<p>En serio, a toda mi familia le encantan.Quieren comer arepas para el desayuno, lonche y cena. </p>",
             "author": "Mirella Acá",
             "job": "",
             "star": "5",
@@ -154,7 +154,7 @@
         "content_bkdY3X": {
           "type": "content",
           "settings": {
-            "quote": "<p>Ya probé todo hoy! Arepa en el desayuno, pollo en el almuerzo y carne mechada de cena.Todo demasiado rico. Gracias!<\/p>",
+            "quote": "<p>Ya probé todo hoy! Arepa en el desayuno, pollo en el almuerzo y carne mechada de cena.Todo demasiado rico. Gracias!</p>",
             "author": "Anabella Gabaldon",
             "job": "",
             "star": "5",
@@ -164,7 +164,7 @@
         "content_cT8rdt": {
           "type": "content",
           "settings": {
-            "quote": "<p>La comida ha estado exquisita, súper saludable. Muchas gracias me ha servido mucho en estos días porque he estado de reposo, muchas bendiciones para ti y tu negocio.<\/p>",
+            "quote": "<p>La comida ha estado exquisita, súper saludable. Muchas gracias me ha servido mucho en estos días porque he estado de reposo, muchas bendiciones para ti y tu negocio.</p>",
             "author": "Enelvis Roca",
             "job": "",
             "star": "5",
@@ -174,7 +174,7 @@
         "content_ez9jAK": {
           "type": "content",
           "settings": {
-            "quote": "<p>Quería decirte que estoy fascinada con la comida!!! Hoy me hizo un lunes menos complicado!!! Mil gracias!<\/p>",
+            "quote": "<p>Quería decirte que estoy fascinada con la comida!!! Hoy me hizo un lunes menos complicado!!! Mil gracias!</p>",
             "author": "Angellie Castellanos",
             "job": "",
             "star": "5",
@@ -203,7 +203,7 @@
         "enable_overlay": true,
         "background_color": "#293820",
         "overlay_transparency": "1",
-        "section_heading": "Check what our users are saying",
+        "section_heading": "Check what our customers are saying",
         "section_sub_heading": "Reviews",
         "section_description": "",
         "section_button_text": "",
@@ -227,9 +227,9 @@
         "border_radius": "30px 0px 30px 30px",
         "boxed_border_radius": "6",
         "column_gap": "30",
-        "content_width": "30\/70",
-        "lap_content_width": "20\/80",
-        "tab_content_width": "30\/70",
+        "content_width": "30/70",
+        "lap_content_width": "20/80",
+        "tab_content_width": "30/70",
         "vertical_position": "vertical-top",
         "testimonial_border_color": "",
         "testimonial_background_color": "",
@@ -261,7 +261,7 @@
       "type": "apps",
       "blocks": {
         "mageplaza_instagram_feed_mp_instagram_block_fN9azh": {
-          "type": "shopify:\/\/apps\/mageplaza-instagram-feed\/blocks\/mp_instagram_block\/2e85b90f-5da9-4654-967e-051f1942340c",
+          "type": "shopify://apps/mageplaza-insta-feed/blocks/mp_instagram_block/2e85b90f-5da9-4654-967e-051f1942340c",
           "settings": {
             "mp_instagram_feed_id": "TcdMQoFOWyIKoSTTllU4"
           }
