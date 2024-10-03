@@ -355,7 +355,7 @@
           "bg_color": "#f9b827",
           "text_color": "#ffffff",
           "text_hover_color": "#f30e19",
-          "text": "<p>Place your order by 11 AM, and we will ship it the next business day.</p>",
+          "text": "<p>Place your order by 11 AM for next business day shipping—Available only in the Chicago Greater Area.</p>",
           "announcement_height": 40,
           "topbar_bg": "#ffffff",
           "disable_topbar": true,
