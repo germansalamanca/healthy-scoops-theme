@@ -128,7 +128,34 @@
 
 .shopify-payment-button, #shopify-installments, .shopify-installments{
 	display: none !important;
-}	
+}
+.product-collection{
+	& > li{
+		.product-option-trigger{
+			ul{
+				li:first-child{
+					&:after{
+						visibility: hidden;
+					}
+				}
+			}
+		}
+		&.has-variants{
+			.product-option-trigger{
+				ul{
+					li:first-child{
+						&:after{
+							visibility: visible;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
 
 // Megaplaza Instagram feed
 .Mageplaza-MediaItem{

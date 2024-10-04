@@ -1,21 +1,21 @@
- {%- liquid
- unless current_collection == blank 
- assign current_collection = collection 
- endunless 
- assign on_sale = false 
- assign sale_text = 'products.product.sale' | t 
- if product.compare_at_price > product.price 
- assign on_sale = true 
- endif 
- assign sold_out = true 
- assign sold_out_text = 'products.product.sold_out' | t 
- if product.available 
- assign sold_out = false 
- endif 
- assign current_variant = product.selected_or_first_available_variant 
+{%- liquid
+  unless current_collection == blank
+    assign current_collection = collection
+  endunless
+  assign on_sale = false
+  assign sale_text = 'products.product.sale' | t
+  if product.compare_at_price > product.price
+    assign on_sale = true
+  endif
+  assign sold_out = true
+  assign sold_out_text = 'products.product.sold_out' | t
+  if product.available
+    assign sold_out = false
+  endif
+  assign current_variant = product.selected_or_first_available_variant
 
- assign productURL =  product.url | within: collection | append: '?view=quickview'  
- assign productURL =  "/products/" | append: product.handle | append: '?view=quickview'  
+  assign productURL = product.url | within: collection | append: '?view=quickview'
+  assign productURL = '/products/' | append: product.handle | append: '?view=quickview'
 %}
 {% capture product_form_config %}
 {
@@ -28,256 +28,328 @@
 }
 {% endcapture %}
 
-<li class="{{ swiperSlideClass }} grid-item product-grid-item {% if sold_out %} sold-out{% endif %}{% if on_sale %} on-sale{% endif %} {{ carousel }}" id="product-{{ product.id }}">
+<li
+  class="{{ swiperSlideClass }}{% if product.variants.size > 1 %} has-variants {% endif %}grid-item product-grid-item {% if sold_out %} sold-out{% endif %}{% if on_sale %} on-sale{% endif %} {{ carousel }}"
+  id="product-{{ product.id }}"
+>
   <div class="wow fadeIn products">
-    <div class="product-container">  
+    <div class="product-container">
       {% if settings.enable_timer %}
-      {% render 'deal-snippet', productID: product.id, product: product %} 
+        {% render 'deal-snippet', productID: product.id, product: product %}
       {% endif %}
-      <a href="{{ product.url | within: collection }}" class="grid-link product-group">            
-      {% unless sold_out %}
-        {% if on_sale and settings.collections_show_sale_circle %}
-        <div class="featured-tag">
-          <span class="badge badge--sale">
-            <span class="gift-tag badge__text{% if sale_text.size > 7 %} badge__text--small{% endif %}">{{ 'products.product.sale' | t }}</span>
-          </span>
-        </div>
-        {% endif %}
+      <a href="{{ product.url | within: collection }}" class="grid-link product-group">
+        {% unless sold_out %}
+          {% if on_sale and settings.collections_show_sale_circle %}
+            <div class="featured-tag">
+              <span class="badge badge--sale">
+                <span class="gift-tag badge__text{% if sale_text.size > 7 %} badge__text--small{% endif %}">
+                  {{- 'products.product.sale' | t -}}
+                </span>
+              </span>
+            </div>
+          {% endif %}
         {% endunless %}
         {% if sold_out and settings.collections_show_sold_out_circle %}
-        <span class="badge badge--sold-out">
-          <span class="badge__text{% if sold_out_text.size > 9 %} badge__text--small{% endif %}">{{ 'products.product.sold_out' | t }}</span>
-        </span>
+          <span class="badge badge--sold-out">
+            <span class="badge__text{% if sold_out_text.size > 9 %} badge__text--small{% endif %}">
+              {{- 'products.product.sold_out' | t -}}
+            </span>
+          </span>
         {% endif %}
         {%- if settings.gallery_thumb_carosule -%}
-           <div class="image_group">
-      <div class="dt-sc-swiper-slider swiper-container thumb-gallery-carousel"  item-swiper={{ product.id }}>
-        <div class="swiper-wrapper">
-           {%- for media in product.media -%}
-             {%- if media.media_type == 'image' -%}
-          <div class="swiper-slide">
-            <img
-              srcset="{%- if media.preview_image.width >= 360 -%}{{ media.preview_image | image_url: width: 770 }} 770w,{%- endif -%}
-              {%- if media.preview_image.width >= 800 -%}{{ media.preview_image | image_url: width: 800 }} 800w,{%- endif -%}
-              {%- if media.preview_image.width >= 1070 -%}{{ media.preview_image | image_url: width: 1070 }} 1070w,{%- endif -%}
-              {%- if media.preview_image.width >= 1500 -%}{{ media.preview_image | image_url: width: 1500 }} 1500w,{%- endif -%}
-              {%- if media.preview_image.width >= 1920 -%}{{ media.preview_image | image_url: width: 1920 }} 1920w,{%- endif -%}
-              {{ media.preview_image | image_url }} {{ media.preview_image.width }}w"
-              src="{{ media.preview_image | image_url: width: 1920 }}"
-              sizes="(min-width: {{ settings.container_width }}px) {{ settings.container_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 3), (min-width: 750px) calc((100vw - 120px) / 2), calc((100vw - 35px) / 2)"
-              alt="{{ media.preview_image.alt }}"
-              loading="lazy"
-              class="motion-reduce featured-image teaser"
-              width="{{ media.preview_image.width }}"
-              height="{{ media.preview_image.height }}"
-              >
+          <div class="image_group">
+            <div class="dt-sc-swiper-slider swiper-container thumb-gallery-carousel" item-swiper="{{ product.id }}">
+              <div class="swiper-wrapper">
+                {%- for media in product.media -%}
+                  {%- if media.media_type == 'image' -%}
+                    <div class="swiper-slide">
+                      <img
+                        srcset="
+                          {%- if media.preview_image.width >= 360 -%}{{ media.preview_image | image_url: width: 770 }} 770w,{%- endif -%}
+                          {%- if media.preview_image.width >= 800 -%}{{ media.preview_image | image_url: width: 800 }} 800w,{%- endif -%}
+                          {%- if media.preview_image.width >= 1070 -%}{{ media.preview_image | image_url: width: 1070 }} 1070w,{%- endif -%}
+                          {%- if media.preview_image.width >= 1500 -%}{{ media.preview_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                          {%- if media.preview_image.width >= 1920 -%}{{ media.preview_image | image_url: width: 1920 }} 1920w,{%- endif -%}
+                          {{ media.preview_image | image_url }} {{ media.preview_image.width }}w
+                        "
+                        src="{{ media.preview_image | image_url: width: 1920 }}"
+                        sizes="(min-width: {{ settings.container_width }}px) {{ settings.container_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 3), (min-width: 750px) calc((100vw - 120px) / 2), calc((100vw - 35px) / 2)"
+                        alt="{{ media.preview_image.alt }}"
+                        loading="lazy"
+                        class="motion-reduce featured-image teaser"
+                        width="{{ media.preview_image.width }}"
+                        height="{{ media.preview_image.height }}"
+                      >
+                    </div>
+                  {%- endif -%}
+                {% endfor %}
+              </div>
+              <div class="swiper-button swiper-button-prev btn-next-{{ product.id }}"></div>
+              <div class="swiper-button swiper-button-next  btn-prev-{{ product.id }}"></div>
+            </div>
           </div>
-               {%- endif -%}
-          {% endfor %}
-        </div>
-        <div class="swiper-button swiper-button-prev btn-next-{{ product.id }}"></div>
-        <div class="swiper-button swiper-button-next  btn-prev-{{ product.id }}"></div>
-      </div>
-      </div>
         {%- else -%}
-        <div class="image_group">
-          <div class="ImageOverlayCa"></div>
-          <div class="reveal {{ settings.product_hover_effect }}">
-            <span class="product-additional">
-              <img
-                srcset="{%- if product.featured_media.width >= 165 -%}{{ product.featured_media | image_url: width: 165 }} 165w,{%- endif -%}
+          <div class="image_group">
+            <div class="ImageOverlayCa"></div>
+            <div class="reveal {{ settings.product_hover_effect }}">
+              <span class="product-additional">
+                <img
+                  srcset="
+                    {%- if product.featured_media.width >= 165 -%}{{ product.featured_media | image_url: width: 165 }} 165w,{%- endif -%}
                     {%- if product.featured_media.width >= 360 -%}{{ product.featured_media | image_url: width: 360 }} 360w,{%- endif -%}
                     {%- if product.featured_media.width >= 533 -%}{{ product.featured_media | image_url: width: 533 }} 533w,{%- endif -%}
                     {%- if product.featured_media.width >= 720 -%}{{ product.featured_media | image_url: width: 720 }} 720w,{%- endif -%}
                     {%- if product.featured_media.width >= 940 -%}{{ product.featured_media | image_url: width: 940 }} 940w,{%- endif -%}
                     {%- if product.featured_media.width >= 1066 -%}{{ product.featured_media | image_url: width: 1066 }} 1066w,{%- endif -%}
-                    {{ product.featured_media | image_url }} {{ product.featured_media.width }}w"
-                src="{{ product.featured_media | image_url: width: 1920 }}"
-                sizes="(min-width: {{ settings.container_width }}px) {{ settings.container_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 3), (min-width: 480px) calc((100vw - 120px) / 2), calc((100vw - 35px) / 2)"
-                alt="{{ product.featured_media.alt }}"
-                loading="lazy"
-                class="motion-reduce featured-image teaser"
-                width="{{ product.featured_media.width }}"
-                height="{{ product.featured_media.height }}"
+                    {{ product.featured_media | image_url }} {{ product.featured_media.width }}w
+                  "
+                  src="{{ product.featured_media | image_url: width: 1920 }}"
+                  sizes="(min-width: {{ settings.container_width }}px) {{ settings.container_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 3), (min-width: 480px) calc((100vw - 120px) / 2), calc((100vw - 35px) / 2)"
+                  alt="{{ product.featured_media.alt }}"
+                  loading="lazy"
+                  class="motion-reduce featured-image teaser"
+                  width="{{ product.featured_media.width }}"
+                  height="{{ product.featured_media.height }}"
                 >
-            </span>
-             {%- if product.media[1] != nil  and settings.secondary_image_use %}
-              <img
-                srcset="
-                   {%- if product.media[1].width >= 165 -%}{{ product.media[1] | image_url: width: 165 }} 165w,{%- endif -%}
-                  {%- if product.media[1].width >= 360 -%}{{ product.media[1] | image_url: width: 360 }} 360w,{%- endif -%}
-                  {%- if product.media[1].width >= 533 -%}{{ product.media[1] | image_url: width: 533 }} 533w,{%- endif -%}
-                  {%- if product.media[1].width >= 720 -%}{{ product.media[1] | image_url: width: 720 }} 720w,{%- endif -%}
-                  {%- if product.media[1].width >= 940 -%}{{ product.media[1] | image_url: width: 940 }} 940w,{%- endif -%}
-                  {%- if product.media[1].width >= 1066 -%}{{ product.media[1] | image_url: width: 1066 }} 1066w,{%- endif -%}
-                  {{ product.media[1] | image_url }} {{ product.media[1].width }}w
-                 "
-                src="{{ product.media[1] | image_url: width: 1920 }}"
-              sizes="(min-width: {{ settings.container_width }}px) {{ settings.container_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 3), (min-width: 480px) calc((100vw - 120px) / 2), calc((100vw - 35px) / 2)"
-              alt="{{ product.media[1].alt }}"
-              loading="lazy"
-              class="motion-reduce hidden-feature_img teaser"
-              width="{{ product.media[1].width }}"
-              height="{{ product.media[1].height }}"
-              >
+              </span>
+              {%- if product.media[1] != null and settings.secondary_image_use %}
+                <img
+                  srcset="
+                     {%- if product.media[1].width >= 165 -%}{{ product.media[1] | image_url: width: 165 }} 165w,{%- endif -%}
+                    {%- if product.media[1].width >= 360 -%}{{ product.media[1] | image_url: width: 360 }} 360w,{%- endif -%}
+                    {%- if product.media[1].width >= 533 -%}{{ product.media[1] | image_url: width: 533 }} 533w,{%- endif -%}
+                    {%- if product.media[1].width >= 720 -%}{{ product.media[1] | image_url: width: 720 }} 720w,{%- endif -%}
+                    {%- if product.media[1].width >= 940 -%}{{ product.media[1] | image_url: width: 940 }} 940w,{%- endif -%}
+                    {%- if product.media[1].width >= 1066 -%}{{ product.media[1] | image_url: width: 1066 }} 1066w,{%- endif -%}
+                    {{ product.media[1] | image_url }} {{ product.media[1].width }}w
+                  "
+                  src="{{ product.media[1] | image_url: width: 1920 }}"
+                  sizes="(min-width: {{ settings.container_width }}px) {{ settings.container_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 3), (min-width: 480px) calc((100vw - 120px) / 2), calc((100vw - 35px) / 2)"
+                  alt="{{ product.media[1].alt }}"
+                  loading="lazy"
+                  class="motion-reduce hidden-feature_img teaser"
+                  width="{{ product.media[1].width }}"
+                  height="{{ product.media[1].height }}"
+                >
               {%- endif -%}
+            </div>
           </div>
-        </div>
-          {%- endif -%}
+        {%- endif -%}
       </a>
 
       <div class="product_right_tag  {% if on_sale %} offer_exist {% endif %}">
-        {% if on_sale %}{% render 'offer-price', product: current_variant %} {% endif %}         
+        {% if on_sale %}{% render 'offer-price', product: current_variant %} {% endif %}
       </div>
-      <div class="ImageWrapper">        
-        <div class="product-button dt-sc_{{ settings.product_button_style }} {{ settings.icon_alignment }}"> 
-           {% if settings.product_button_style == 'icon' %}
-
-          {% if settings.enable_wishlist %}
-          {%- render 'button-wishlist', product: product -%}
-          {% endif %}        
-
-          {% if settings.enable_quick_view %}
-          <div>
-            <a data-url="{{ productURL }}" 
-               class="product-thumb-full-quick-view popup-product quick-view-btn dt-sc-btn" 
-               href="{{ product.url | within: collection }}"
-               data-product-id="{{ product.id }}" 
-               data-slider-type="slider_gallery" 
-               data-effect="mfp-move-from-top"></a>
-          </div>
-          {% endif %}  
-   {% endif %}  
-   {% if settings.product_button_style == 'button' %}
-           
-          <div class="btn-group">
-            {% if settings.enable_compare %}           
-            <div>
-              <dtx-compare><a href="javascript:void(0);" class="add-compare" data-product_handle="{{ product.handle }}">{{ 'products.compare.addToCompareList' | t }}</a></dtx-compare>
-            </div>  
-            {% endif %} 
-
+      <div class="ImageWrapper">
+        <div class="product-button dt-sc_{{ settings.product_button_style }} {{ settings.icon_alignment }}">
+          {% if settings.product_button_style == 'icon' %}
             {% if settings.enable_wishlist %}
-            {%- if product.handle != blank -%}
-            <div>
-              <dtx-wishlist><a href="javascript:void(0);" class="add-wishlist" data-product_handle="{{ product.handle }}">{{ 'products.wishlist.addToWishList' | t }}</a></dtx-wishlist>
-            </div>  
+              {%- render 'button-wishlist', product: product -%}
             {% endif %}
+
+            {% if settings.enable_quick_view %}
+              <div>
+                <a
+                  data-url="{{ productURL }}"
+                  class="product-thumb-full-quick-view popup-product quick-view-btn dt-sc-btn"
+                  href="{{ product.url | within: collection }}"
+                  data-product-id="{{ product.id }}"
+                  data-slider-type="slider_gallery"
+                  data-effect="mfp-move-from-top"
+                ></a>
+              </div>
             {% endif %}
-            
-            
-            
-            
-            {% if settings.enable_add_cart %}            
-            {% unless settings.display_color_variant or settings.display_item_size %}
-                {% form 'product', product, data-product-form: product_form_config %}  
-                <input type="hidden" name="id" class="variant-push" value="{{ product.variants[0].id }}" /> 
-                <div class="dt-sc-btn-group">                                   
-                  {% if sold_out %}
-                  <button class="dt-sc-btn" disabled>
-                    {{ 'products.product.sold_out' | t }}
-                  </button>                   
-                  {% else %}
-                  <button type="submit" name="add" class="dT_AddToCart dt-sc-btn">
-                    {{ 'products.product.add_to_cart' | t }}
-                  </button> 
-                  {% endif %}               
+          {% endif %}
+          {% if settings.product_button_style == 'button' %}
+            <div class="btn-group">
+              {% if settings.enable_compare %}
+                <div>
+                  <dtx-compare
+                    ><a href="javascript:void(0);" class="add-compare" data-product_handle="{{ product.handle }}">
+                      {{- 'products.compare.addToCompareList' | t -}}
+                    </a></dtx-compare
+                  >
                 </div>
-                {% endform %}                     
-            {% endunless %}            
-            {% endif %}
-            
-          {% if settings.enable_quick_view %}
-          <div>
-            <a data-url="{{ productURL }}" 
-               class="product-thumb-full-quick-view popup-product quick-view-btn dt-sc-btn" 
-               href="{{ product.url | within: collection }}"
-               data-product-id="{{ product.id }}" 
-               data-slider-type="slider_gallery" 
-               data-effect="mfp-move-from-top">
-            {{ 'products.product.quick_view' | t }}
-            </a>
-          </div>
-          {% endif %}  
-      {% endif %} 
-          </div	>
+              {% endif %}
+
+              {% if settings.enable_wishlist %}
+                {%- if product.handle != blank -%}
+                  <div>
+                    <dtx-wishlist
+                      ><a href="javascript:void(0);" class="add-wishlist" data-product_handle="{{ product.handle }}">
+                        {{- 'products.wishlist.addToWishList' | t -}}
+                      </a></dtx-wishlist
+                    >
+                  </div>
+                {% endif %}
+              {% endif %}
+
+              {% if settings.enable_add_cart %}
+                {% unless settings.display_color_variant or settings.display_item_size %}
+                  {% form 'product', product, data-product-form: product_form_config %}
+                    <input type="hidden" name="id" class="variant-push" value="{{ product.variants[0].id }}">
+                    <div class="dt-sc-btn-group">
+                      {% if sold_out %}
+                        <button class="dt-sc-btn" disabled>
+                          {{ 'products.product.sold_out' | t }}
+                        </button>
+                      {% else %}
+                        <button type="submit" name="add" class="dT_AddToCart dt-sc-btn">
+                          {{ 'products.product.add_to_cart' | t }}
+                        </button>
+                      {% endif %}
+                    </div>
+                  {% endform %}
+                {% endunless %}
+              {% endif %}
+
+              {% if settings.enable_quick_view %}
+                <div>
+                  <a
+                    data-url="{{ productURL }}"
+                    class="product-thumb-full-quick-view popup-product quick-view-btn dt-sc-btn"
+                    href="{{ product.url | within: collection }}"
+                    data-product-id="{{ product.id }}"
+                    data-slider-type="slider_gallery"
+                    data-effect="mfp-move-from-top"
+                  >
+                    {{ 'products.product.quick_view' | t }}
+                  </a>
+                </div>
+              {% endif %}
+          {% endif %}
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="product-detail {{ settings.item_aignment }}">
-      <span class="variant-status">{% if  product.variants[0].available %}<span class="in-stock"> {{ 'products.product.product_is_avalable' | t }}</span>{%  else %}<span class="out-of-stock"> {{ 'products.product.sold_out' | t }}</span>{% endif %}</span>
-      {% render 'new-label' , product: product %}   
-      {% if settings.display_vendor %}<p class="product-vendor"><span>{{ product.vendor }}</span></p>{% endif %}      
-      <h4  class="grid-link__title"><a href="{{ product.url | within: collection }}">{{ product.title }}</a></h4>
-      {% if settings.product_price_style == 'as_variant' %}
-    <div class="product-option-trigger">
+  <div class="product-detail {{ settings.item_aignment }}">
+    <span class="variant-status">
+      {%- if product.variants[0].available -%}
+        <span class="in-stock"> {{ 'products.product.product_is_avalable' | t }}</span>
+      {%- else -%}
+        <span class="out-of-stock"> {{ 'products.product.sold_out' | t }}</span>
+      {%- endif -%}
+    </span>
+    {% render 'new-label', product: product %}
+    {% if settings.display_vendor %}
+      <p class="product-vendor">
+        <span>{{ product.vendor }}</span>
+      </p>
+    {% endif %}
+    <h4 class="grid-link__title">
+      <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
+    </h4>
+    {% if settings.product_price_style == 'as_variant' %}
+      <div class="product-option-trigger">
         <ul class="box">
-        <li class="init" data-value="{{ product.variants[0].price | money }}" data-id="{{ product.variants[0].id }}"> {{ product.variants[0].title }} - {{ product.variants[0].price | money }}</li>   
-        {% for variant in product.variants %} 
-        <li data-value="{{ variant.price | money }}" data-status="{{ variant.available }}" data-id="{{ variant.id }}"> {{ variant.title }} - {{ variant.price | money }}</li>   
-        {% endfor %}      
+          <li class="init" data-value="{{ product.variants[0].price | money }}" data-id="{{ product.variants[0].id }}">
+            {{ product.variants[0].title }} - {{ product.variants[0].price | money }}
+          </li>
+          {% for variant in product.variants %}
+            <li
+              data-value="{{ variant.price | money }}"
+              data-status="{{ variant.available }}"
+              data-id="{{ variant.id }}"
+            >
+              {{ variant.title }} - {{ variant.price | money }}
+            </li>
+          {% endfor %}
         </ul>
       </div>
-      {% endif %}
-    
-      {% if settings.product_review %}
-      <span class="shopify-product-reviews-badge spr-badge" data-id="{{ product.id }}"></span> 
-      {% endif %}             
-      <div class="grid-link__meta">
-        {% render 'product-price', variant: product %}  
-      </div>    
-      
-      {% if settings.product_button_style == 'icon' %}
-      {% render 'variant-tag-color', product: product %}   
-      {% endif %}
-      {% if settings.truncated_description %}
-      <div class="product_desc grid_list">{{ product.description | strip_html | truncatewords: settings.excerpt_count }}</div>
-      {% endif %}      
-      {% if settings.product_button_style == 'button' %}
-      {% if product.available %}   
-      {% form 'product', product, data-product-form: product_form_config %}  
-      
-      <div class="add-to-cart-group">
-               {% if settings.enable_add_cart %}
-            <button type="submit" name="add" class="dT_AddToCart dt-sc-btn">{{ 'products.product.add_to_cart' | t }}</button>        
-          {% endif %} 
-        <div class="cart-plus-minus"> 
-            {% if section.settings.show_quantity_selector %}
-            <div class="product-attributes dt-sc-qty">        
-              <div class="quantity product-form__item product-form__item--quantity product-item-caption-qty grid-qty">
-                <button class="quantity-btn quantity-btn-minus btn-number btn-number-{{ product.id }}" type="button" data-qty-btn="btn-number-{{ product.id }}"  data-type="minus" data-field="quant[1]">&#45;</button>
-                <input type="text" id="Quantity-{{ product.id }}" name="quantity" value="1" class="quantity-btn-number form-control input-number input-number-{{ product.id }} product-form__input" pattern="[0-9]*">
-                <button class="quantity-btn quantity-btn-plus btn-number btn-number-{{ product.id }}" data-qty-btn="btn-number-{{ product.id }}" type="button"  data-type="plus" data-field="quant[1]">&#43;</button>
-              </div>
-            </div>
-            {% endif %}
-        </div>
-      </div>
-    
-      {% render 'variant-tag-color', product: product %}   
-      <input type="hidden" name="id" class="variant-push" value="{{ product.variants[0].id }}" /> 
-      {% endform %} 
-        {% else %} 
-        <button type="submit" name="add" class="dt-sc-btn sold-out-btn disabled">Sold Out</button> 
-      {% endif %}  
-      {% endif %} 
-      
-      
-      {% if product.variants.first.inventory_quantity > 0 and product.metafields.my_fields.stock_initial != blank %}
-    {% assign productStartCount = product.metafields.my_fields.stock_initial | times: 1 %}
-    {% if productStartCount > 0 %}
-    {% assign productInventory = product.variants.first.inventory_quantity %}
-    <div class="items-left">
-      <div class="status-bar">
-        <div class="sold-bar" style="width: {{ productStartCount | minus: productInventory }}%"></div>
-      </div>
+    {% endif %}
 
-      <p><span class="item_sold">{{ 'products.product.sold' | t }} {{ productStartCount | minus: productInventory }}</span> <span class="item-ramain">{{ 'products.product.remain' | t }} {{ productInventory }}</span></p>
+    {% if settings.product_review %}
+      <span class="shopify-product-reviews-badge spr-badge" data-id="{{ product.id }}"></span>
+    {% endif %}
+    <div class="grid-link__meta">
+      {% render 'product-price', variant: product %}
     </div>
-       {% else %}
-    <p> {{ 'products.product.all_sold' | t }}</p>
+
+    {% if settings.product_button_style == 'icon' %}
+      {% render 'variant-tag-color', product: product %}
     {% endif %}
+    {% if settings.truncated_description %}
+      <div class="product_desc grid_list">
+        {{ product.description | strip_html | truncatewords: settings.excerpt_count }}
+      </div>
     {% endif %}
-  </div>  
+    {% if settings.product_button_style == 'button' %}
+      {% if product.available %}
+        {% form 'product', product, data-product-form: product_form_config %}
+          <div class="add-to-cart-group">
+            {% if settings.enable_add_cart %}
+              <button type="submit" name="add" class="dT_AddToCart dt-sc-btn">
+                {{ 'products.product.add_to_cart' | t }}
+              </button>
+            {% endif %}
+            <div class="cart-plus-minus">
+              {% if section.settings.show_quantity_selector %}
+                <div class="product-attributes dt-sc-qty">
+                  <div class="quantity product-form__item product-form__item--quantity product-item-caption-qty grid-qty">
+                    <button
+                      class="quantity-btn quantity-btn-minus btn-number btn-number-{{ product.id }}"
+                      type="button"
+                      data-qty-btn="btn-number-{{ product.id }}"
+                      data-type="minus"
+                      data-field="quant[1]"
+                    >
+                      &#45;
+                    </button>
+                    <input
+                      type="text"
+                      id="Quantity-{{ product.id }}"
+                      name="quantity"
+                      value="1"
+                      class="quantity-btn-number form-control input-number input-number-{{ product.id }} product-form__input"
+                      pattern="[0-9]*"
+                    >
+                    <button
+                      class="quantity-btn quantity-btn-plus btn-number btn-number-{{ product.id }}"
+                      data-qty-btn="btn-number-{{ product.id }}"
+                      type="button"
+                      data-type="plus"
+                      data-field="quant[1]"
+                    >
+                      &#43;
+                    </button>
+                  </div>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+
+          {% render 'variant-tag-color', product: product %}
+          <input type="hidden" name="id" class="variant-push" value="{{ product.variants[0].id }}">
+        {% endform %}
+      {% else %}
+        <button type="submit" name="add" class="dt-sc-btn sold-out-btn disabled">Sold Out</button>
+      {% endif %}
+    {% endif %}
+
+    {% if product.variants.first.inventory_quantity > 0 and product.metafields.my_fields.stock_initial != blank %}
+      {% assign productStartCount = product.metafields.my_fields.stock_initial | times: 1 %}
+      {% if productStartCount > 0 %}
+        {% assign productInventory = product.variants.first.inventory_quantity %}
+        <div class="items-left">
+          <div class="status-bar">
+            <div class="sold-bar" style="width: {{ productStartCount | minus: productInventory }}%"></div>
+          </div>
+
+          <p>
+            <span class="item_sold">
+              {{- 'products.product.sold' | t }}
+              {{ productStartCount | minus: productInventory -}}
+            </span>
+            <span class="item-ramain">
+              {{- 'products.product.remain' | t }}
+              {{ productInventory -}}
+            </span>
+          </p>
+        </div>
+      {% else %}
+        <p>{{ 'products.product.all_sold' | t }}</p>
+      {% endif %}
+    {% endif %}
+  </div>
 </li>

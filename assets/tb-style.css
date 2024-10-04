@@ -1938,6 +1938,13 @@ body .tb-about-hero .tb-decorative.right {
   display: none !important;
 }
 
+.product-collection > li .product-option-trigger ul li:first-child:after {
+  visibility: hidden;
+}
+.product-collection > li.has-variants .product-option-trigger ul li:first-child:after {
+  visibility: visible;
+}
+
 .Mageplaza-MediaItem {
   background: transparent !important;
 }
