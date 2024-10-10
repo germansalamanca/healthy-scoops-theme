@@ -182,6 +182,7 @@
     "enable_fake_sales": false,
     "minqty": 10,
     "maxqty": 100,
+    "shipping_calculator": "Disabled",
     "password_bg_img": "shopify://shop_images/modern-jewelry-and-accessories-on-display.jpg",
     "password_logo": "shopify://shop_images/about-icon-1.png",
     "logo_txt_color": "#ba8d69",
