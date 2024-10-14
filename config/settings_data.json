@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "favicon": "shopify://shop_images/Mesa_de_trabajo_191_300x_db5bec63-1c42-4db4-8588-38f12e2baa68.png",
@@ -151,7 +151,7 @@
     "product_sidebar_mobile": false,
     "sidebar_title_bg": "rgba(0,0,0,0)",
     "sidebar_title_border": "#f3eeeb",
-    "cart_notes_enable": false,
+    "cart_notes_enable": true,
     "ajax_cart_method": "drawer",
     "search_grid": "4",
     "search_results_per_page": "8",
