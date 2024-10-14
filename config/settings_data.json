@@ -152,7 +152,7 @@
     "sidebar_title_bg": "rgba(0,0,0,0)",
     "sidebar_title_border": "#f3eeeb",
     "cart_notes_enable": true,
-    "ajax_cart_method": "page",
+    "ajax_cart_method": "drawer",
     "search_grid": "4",
     "search_results_per_page": "8",
     "enable_timer": false,
