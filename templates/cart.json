@@ -20,10 +20,11 @@
       "blocks": {
         "local_delivery_pickup_se_cart_block_URFKg7": {
           "type": "shopify://apps/local-delivery-pickup-se/blocks/cart-block/2eb39888-20d1-47c4-960f-ad05f2e225b3",
+          "disabled": true,
           "settings": {
             "lmd_base_color": "#868686",
             "lmd_slot_text_color": "#000000",
-            "lmd_slot_icon_color": "transparent",
+            "lmd_slot_icon_color": "rgba(0,0,0,0)",
             "lmd_btn_color": "#000000",
             "lmd_text_color": "#ffffff",
             "lmd_calender_color": "#ffffff",
