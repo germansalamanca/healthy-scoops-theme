@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -15,28 +15,23 @@
         "1f512db9-2367-421b-a215-378e4df4b069": {
           "type": "size_chart",
           "disabled": true,
-          "settings": {
-          }
+          "settings": {}
         },
         "b0a376af-f686-4ca3-92b8-732dfea27dfe": {
           "type": "notify-form",
-          "settings": {
-          }
+          "settings": {}
         },
         "bd5fe641-75f6-4c13-999c-d0be32e3bc87": {
           "type": "title",
-          "settings": {
-          }
+          "settings": {}
         },
         "7c9c1efb-83bb-46b0-abe9-7c4951265cf4": {
           "type": "price",
-          "settings": {
-          }
+          "settings": {}
         },
         "db797c60-1d3c-4034-b55d-151ec5cae2d7": {
           "type": "deal",
-          "settings": {
-          }
+          "settings": {}
         },
         "f26a6ae3-78b7-4d9f-885e-fcbc49deba02": {
           "type": "menu",
@@ -48,14 +43,12 @@
         "cb874c94-c1ed-44c9-a5d6-a12bc6093239": {
           "type": "vendor",
           "disabled": true,
-          "settings": {
-          }
+          "settings": {}
         },
         "c0548d06-402e-4234-9a58-03c52a7d6c74": {
           "type": "type",
           "disabled": true,
-          "settings": {
-          }
+          "settings": {}
         },
         "2ff9f47d-7f11-4be0-b8ec-143624b3ca83": {
           "type": "collection",
@@ -75,8 +68,7 @@
         },
         "412a0fea-8c0c-495e-8a2e-6da2be50a3cd": {
           "type": "sku",
-          "settings": {
-          }
+          "settings": {}
         },
         "a0e578fb-e296-4fe2-9330-599c1cfdca37": {
           "type": "badge",
@@ -86,8 +78,7 @@
         },
         "abe6528b-336c-4949-8ad4-f133c1f33c49": {
           "type": "social-sharing",
-          "settings": {
-          }
+          "settings": {}
         },
         "5d1eb96d-9f94-4643-a16b-63e55d8e3587": {
           "type": "CMS",
@@ -114,13 +105,13 @@
           "type": "icon_text",
           "settings": {
             "text1": "Dietary preferences:",
-            "icon1": "shopify:\/\/shop_images\/dietary.png",
+            "icon1": "shopify://shop_images/dietary.png",
             "html1": "",
             "link1": "",
             "text1_color": "#000000",
             "html1_color": "#000000",
             "text2": "Allergen information:",
-            "icon2": "shopify:\/\/shop_images\/allergenic.png",
+            "icon2": "shopify://shop_images/allergenic.png",
             "html2": "",
             "link2": "",
             "text2_color": "#000000",
@@ -176,8 +167,8 @@
         "tab_position": "bottom",
         "tab_style": "tab",
         "product_tab1": true,
-        "product_tab1_heading": "Heating instructions",
-        "product_tab2": true,
+        "product_tab1_heading": "How it works",
+        "product_tab2": false,
         "product_tab2_heading": "FAQ's",
         "page_content": "tab-faq",
         "product_tab3": true,
