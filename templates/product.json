@@ -168,7 +168,7 @@
         "tab_style": "tab",
         "product_tab1": true,
         "product_tab1_heading": "Heating Instructions",
-        "product_tab2": false,
+        "product_tab2": true,
         "product_tab2_heading": "FAQ's",
         "page_content": "tab-faq",
         "product_tab3": true,
