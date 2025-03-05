@@ -355,8 +355,8 @@
           "home_page_only": false,
           "bg_color": "#f9b827",
           "text_color": "#ffffff",
-          "text_hover_color": "#4F8A10",
-          "text": "<p>Place your order by 11 AM for next business day shipping—Available only in the Chicago Greater Area.</p>",
+          "text_hover_color": "#4f8a10",
+          "text": "<p>Enjoy free delivery on orders placed from March 5th to March 13th! Orders will be delivered on Friday, March 7th and Friday, March 14th.</p>",
           "announcement_height": 40,
           "topbar_bg": "#ffffff",
           "disable_topbar": true,
@@ -748,18 +748,15 @@
       },
       "password-header": {
         "type": "password-header",
-        "settings": {
-        }
+        "settings": {}
       },
       "password-content": {
         "type": "password-content",
-        "settings": {
-        }
+        "settings": {}
       },
       "password-footer": {
         "type": "password-footer",
-        "settings": {
-        }
+        "settings": {}
       },
       "faq-template": {
         "type": "faq-template",
@@ -1629,14 +1626,12 @@
       "4651250007506174373": {
         "type": "shopify://apps/mageplaza-instagram-feed/blocks/app_embed/2e85b90f-5da9-4654-967e-051f1942340c",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "13768625480086291342": {
         "type": "shopify://apps/forms/blocks/forms/8744a304-fcb1-4347-b211-bb6b4759a76a",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       }
     }
   }
